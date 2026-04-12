@@ -1,0 +1,7 @@
+recipe:
+  Rx: recipes/ws14-18-flypy18
+  description: WuSong 14-18 schema defaults to Flypy + 18-key
+
+install_files:
+  - ws14_18key.schema.yaml
+  - algebra_14_18key.yaml

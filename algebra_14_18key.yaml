@@ -1,0 +1,240 @@
+# Rime schema
+# encoding: utf-8
+
+# 雾凇14键 26键转14键 QWERTY 映射
+# q,w -> q   e,r -> e   t,y -> t   u,i -> u   o,p -> o
+# a,s -> a   d,f -> d   g,h -> g   j,k -> j
+# z,x -> z   c,v -> c   b,n -> b
+# l, m 单键
+
+algebra_14key:
+  __append:
+    - derive/[qw]/q/
+    - derive/[er]/e/
+    - derive/[ty]/t/
+    - derive/[ui]/u/
+    - derive/[op]/o/
+    - derive/[as]/a/
+    - derive/[df]/d/
+    - derive/[gh]/g/
+    - derive/[jk]/j/
+    - derive/[zx]/z/
+    - derive/[cv]/c/
+    - derive/[bn]/b/
+    - xlit/qwertyuiopasdfghjklzxcvbnm/qqeettuuooaaddggjjlzzccbbm/
+
+# 雾凇18键 26键转18键 QWERTY 映射
+# q -> q     w,e -> w   r,t -> r   y -> y     u -> u     i,o -> i   p -> p
+# a -> a     s,d -> s   f,g -> f   h -> h     j,k -> j   l -> l
+# z -> z     x,c -> x   v -> v     b,n -> b   m -> m
+algebra_18key:
+  __append:
+    - derive/[we]/w/
+    - derive/[rt]/r/
+    - derive/[io]/i/
+    - derive/[sd]/s/
+    - derive/[fg]/f/
+    - derive/[jk]/j/
+    - derive/[xc]/x/
+    - derive/[bn]/b/
+    - xlit/qwertyuiopasdfghjklzxcvbnm/qwwrryuiipassffhjjlzxxvbbm/
+
+
+
+双拼:
+  自然码双拼:
+    __append:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe])([ioun])$/$1$1$2/
+      - xform/^([aoe])(ng)?$/$1$1$2/
+      - xform/iu$/Ⓠ/
+      - xform/[iu]a$/Ⓦ/
+      - xform/[uv]an$/Ⓡ/
+      - xform/[uv]e$/Ⓣ/
+      - xform/ing$|uai$/Ⓨ/
+      - xform/^sh/Ⓤ/
+      - xform/^ch/Ⓘ/
+      - xform/^zh/Ⓥ/
+      - xform/uo$/Ⓞ/
+      - xform/[uv]n$/Ⓟ/
+      - xform/(.)i?ong$/$1Ⓢ/
+      - xform/[iu]ang$/Ⓓ/
+      - xform/(.)en$/$1Ⓕ/
+      - xform/(.)eng$/$1Ⓖ/
+      - xform/(.)ang$/$1Ⓗ/
+      - xform/ian$/Ⓜ/
+      - xform/(.)an$/$1Ⓙ/
+      - xform/iao$/Ⓒ/
+      - xform/(.)ao$/$1Ⓚ/
+      - xform/(.)ai$/$1Ⓛ/
+      - xform/(.)ei$/$1Ⓩ/
+      - xform/ie$/Ⓧ/
+      - xform/ui$/Ⓥ/
+      - xform/(.)ou$/$1Ⓑ/
+      - xform/in$/Ⓝ/
+      - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+  小鹤双拼:
+    __append:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe])([ioun])$/$1$1$2/
+      - xform/^([aoe])(ng)?$/$1$1$2/
+      - xform/iu$/Ⓠ/
+      - xform/(.)ei$/$1Ⓦ/
+      - xform/uan$/Ⓡ/
+      - xform/[uv]e$/Ⓣ/
+      - xform/un$/Ⓨ/
+      - xform/^sh/Ⓤ/
+      - xform/^ch/Ⓘ/
+      - xform/^zh/Ⓥ/
+      - xform/uo$/Ⓞ/
+      - xform/ie$/Ⓟ/
+      - xform/(.)i?ong$/$1Ⓢ/
+      - xform/ing$|uai$/Ⓚ/
+      - xform/(.)ai$/$1Ⓓ/
+      - xform/(.)en$/$1Ⓕ/
+      - xform/(.)eng$/$1Ⓖ/
+      - xform/[iu]ang$/Ⓛ/
+      - xform/(.)ang$/$1Ⓗ/
+      - xform/ian$/Ⓜ/
+      - xform/(.)an$/$1Ⓙ/
+      - xform/(.)ou$/$1Ⓩ/
+      - xform/[iu]a$/Ⓧ/
+      - xform/iao$/Ⓝ/
+      - xform/(.)ao$/$1Ⓒ/
+      - xform/ui$/Ⓥ/
+      - xform/in$/Ⓑ/
+      - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
+
+  微软双拼:
+    __append:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe].*)$/o$1/
+      - xform/^([ae])(.*)$/$1$1$2/
+      - xform/iu$/Ⓠ/
+      - xform/[iu]a$/Ⓦ/
+      - xform/er$|[uv]an$/Ⓡ/
+      - xform/[uv]e$/Ⓣ/
+      - xform/v$|uai$/Ⓨ/
+      - xform/^sh/Ⓤ/
+      - xform/^ch/Ⓘ/
+      - xform/^zh/Ⓥ/
+      - xform/uo$/Ⓞ/
+      - xform/[uv]n$/Ⓟ/
+      - xform/(.)i?ong$/$1Ⓢ/
+      - xform/[iu]ang$/Ⓓ/
+      - xform/(.)en$/$1Ⓕ/
+      - xform/(.)eng$/$1Ⓖ/
+      - xform/(.)ang$/$1Ⓗ/
+      - xform/ian$/Ⓜ/
+      - xform/(.)an$/$1Ⓙ/
+      - xform/iao$/Ⓒ/
+      - xform/(.)ao$/$1Ⓚ/
+      - xform/(.)ai$/$1Ⓛ/
+      - xform/(.)ei$/$1Ⓩ/
+      - xform/ie$/Ⓧ/
+      - xform/ui$/Ⓥ/
+      - derive/Ⓣ$/Ⓥ/
+      - xform/(.)ou$/$1Ⓑ/
+      - xform/in$/Ⓝ/
+      - xform/ing$/;/
+      - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+  搜狗双拼:
+    __append:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe].*)$/o$1/
+      - xform/^([ae])(.*)$/$1$1$2/
+      - xform/iu$/Ⓠ/
+      - xform/[iu]a$/Ⓦ/
+      - xform/er$|[uv]an$/Ⓡ/
+      - xform/[uv]e$/Ⓣ/
+      - xform/v$|uai$/Ⓨ/
+      - xform/^sh/Ⓤ/
+      - xform/^ch/Ⓘ/
+      - xform/^zh/Ⓥ/
+      - xform/uo$/Ⓞ/
+      - xform/[uv]n$/Ⓟ/
+      - xform/(.)i?ong$/$1Ⓢ/
+      - xform/[iu]ang$/Ⓓ/
+      - xform/(.)en$/$1Ⓕ/
+      - xform/(.)eng$/$1Ⓖ/
+      - xform/(.)ang$/$1Ⓗ/
+      - xform/ian$/Ⓜ/
+      - xform/(.)an$/$1Ⓙ/
+      - xform/iao$/Ⓒ/
+      - xform/(.)ao$/$1Ⓚ/
+      - xform/(.)ai$/$1Ⓛ/
+      - xform/(.)ei$/$1Ⓩ/
+      - xform/ie$/Ⓧ/
+      - xform/ui$/Ⓥ/
+      - xform/(.)ou$/$1Ⓑ/
+      - xform/in$/Ⓝ/
+      - xform/ing$/;/
+      - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
+
+
+  紫光双拼:
+    __append:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - xform/^([aoe].*)$/Ⓞ$1/  # 添上固定的零聲母o，先標記爲大寫O
+      - xform/en$/Ⓦ/
+      - xform/eng$/Ⓣ/
+      - xform/in$|uai$/Ⓨ/
+      - xform/^zh/Ⓤ/
+      - xform/^sh/Ⓘ/
+      - xform/uo$/Ⓞ/
+      - xform/ai$/Ⓟ/
+      - xform/^ch/Ⓐ/
+      - xform/[iu]ang$/Ⓖ/
+      - xform/ang$/Ⓢ/  # ang should be placed after iang/uang
+      - xform/ie$/Ⓓ/
+      - xform/ian$/Ⓕ/
+      - xform/(.)i?ong$/$1Ⓗ/
+      - xform/er$|iu$/Ⓙ/
+      - xform/ei$/Ⓚ/
+      - xform/uan$/Ⓛ/
+      - xform/ing$/;/
+      - xform/ou$/Ⓩ/
+      - xform/[iu]a$/Ⓧ/
+      - xform/iao$/Ⓑ/
+      - xform/ue$|ui$|ve$/Ⓝ/
+      - xform/un$/Ⓜ/
+      - xform/ao$/Ⓠ/ # ao should be placed after iao
+      - xform/an$/Ⓡ/ # an should be placed after uan/ian
+      - xlit/ⓌⓉⓎⓊⒾⓄⓅⒶⒼⓈⒹⒻⒽⒿⓀⓁⓏⓍⒷⓃⓂⓆⓇ/wtyuiopagsdfhjklzxbnmqr/
+
+  智能ABC双拼:
+    __append:
+      - erase/^xx$/
+      - xform/^zh/Ⓐ/
+      - xform/^ch/Ⓔ/
+      - xform/^sh/Ⓥ/
+      - xform/^([aoe].*)$/Ⓞ$1/
+      - xform/ei$/Ⓠ/
+      - xform/ian$/Ⓦ/
+      - xform/er$|iu$/Ⓡ/
+      - xform/[iu]ang$/Ⓣ/
+      - xform/ing$/Ⓨ/
+      - xform/uo$/Ⓞ/
+      - xform/uan$/Ⓟ/
+      - xform/(.)i?ong$/$1Ⓢ/
+      - xform/[iu]a$/Ⓓ/
+      - xform/en$/Ⓕ/
+      - xform/eng$/Ⓖ/
+      - xform/ang$/Ⓗ/
+      - xform/an$/Ⓙ/
+      - xform/iao$/Ⓩ/
+      - xform/ao$/Ⓚ/
+      - xform/in$|uai$/Ⓒ/
+      - xform/ai$/Ⓛ/
+      - xform/ie$/Ⓧ/
+      - xform/ou$/Ⓑ/
+      - xform/un$/Ⓝ/
+      - xform/[uv]e$|ui$/Ⓜ/
+      - xlit/ⓆⓌⒺⓇⓉⓎⓄⓅⒶⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwertyopasdfghjklzxcvbnm/

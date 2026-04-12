@@ -7,8 +7,11 @@ Flypy double-pinyin 18-key **schema** for Rime/Hamster:
 ## Repository layout
 
 - `double_pinyin_flypy_18.schema.yaml`
+- `ws14_18key.schema.yaml`
+- `algebra_14_18key.yaml`
 - `recipes/`
   - `flypy18.recipe.yaml` (Plum recipe entry)
+  - `ws14-18-flypy18.recipe.yaml` (WuSong 14/18 schema, default Flypy+18)
 - `skin/`
   - `hamster-18key-minimal/` (imported 18-key skin)
 - `design/`
@@ -20,6 +23,7 @@ Flypy double-pinyin 18-key **schema** for Rime/Hamster:
 
 ```bash
 bash rime-install calfzhou/rime-hamster-flypy-18keys:recipes/flypy18
+bash rime-install calfzhou/rime-hamster-flypy-18keys:recipes/ws14-18-flypy18
 ```
 
 ### Option B: manual copy
