@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Build .hskin files
         run: make clean && make hskin
@@ -52,15 +54,31 @@ jobs:
             echo "Built $zip_path"
           done
 
-      - name: Extract tag annotation as release notes
-        id: tag_notes
+      - name: Generate release notes from tag range
+        id: release_notes
         shell: bash
         run: |
           set -euo pipefail
-          tag_name="${GITHUB_REF_NAME}"
-          notes="$(git tag -l --format='%(contents)' "$tag_name")"
+          current_tag="${GITHUB_REF_NAME}"
+          previous_tag="$(git describe --tags --abbrev=0 "${current_tag}^" 2>/dev/null || true)"
+
+          if [ -n "$previous_tag" ]; then
+            range="${previous_tag}..${current_tag}"
+            header="## Changes (${previous_tag} -> ${current_tag})"
+          else
+            range="${current_tag}"
+            header="## Changes (${current_tag})"
+          fi
+
+          notes="$(git log --no-merges --pretty='- %s (%h)' ${range})"
+          if [ -z "$notes" ]; then
+            notes="- No commit summary available in this range."
+          fi
+
           {
             echo 'body<<EOF'
+            echo "$header"
+            echo
             echo "$notes"
             echo 'EOF'
           } >> "$GITHUB_OUTPUT"
@@ -71,4 +89,4 @@ jobs:
           files: |
             dist/*.hskin
             dist/*.zip
-          body: ${{ steps.tag_notes.outputs.body }}
+          body: ${{ steps.release_notes.outputs.body }}
