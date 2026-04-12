@@ -16,6 +16,7 @@ Flypy double-pinyin 18-key **schema** for Rime/Hamster:
   - `hamster-18key-minimal/` (imported 18-key skin)
 - `design/`
   - design/plan docs for iterative refinement
+  - `design/skin-structure.md` (skin file structure and editing guide)
 
 ## Rime setup
 
@@ -42,6 +43,7 @@ patch:
 ## Hamster skin
 
 Use any compatible 18-key Hamster skin, then select schema `double_pinyin_flypy_18`.
+In this repo, `.keyboard` files are treated as generated cache and are not tracked.
 
 ## 18-key design rule (current version)
 
