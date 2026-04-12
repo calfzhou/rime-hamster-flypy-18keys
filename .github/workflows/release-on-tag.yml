@@ -1,0 +1,61 @@
+name: Release on Tag
+
+on:
+  push:
+    tags:
+      - "v*"
+      - "*.*.*"
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build .hskin files
+        run: make clean && make hskin
+
+      - name: Build recipe zip packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+
+          for recipe in recipes/*.recipe.yaml; do
+            [ -f "$recipe" ] || continue
+            recipe_name="$(basename "$recipe" .recipe.yaml)"
+
+            mapfile -t install_files < <(
+              awk '
+                /^install_files:/ { in_list=1; next }
+                in_list && /^[^[:space:]-]/ { in_list=0 }
+                in_list && /^[[:space:]]*-[[:space:]]*/ {
+                  sub(/^[[:space:]]*-[[:space:]]*/, "")
+                  print
+                }
+              ' "$recipe"
+            )
+
+            if [ "${#install_files[@]}" -eq 0 ]; then
+              echo "No install_files found in $recipe, skipping."
+              continue
+            fi
+
+            zip_path="dist/${recipe_name}.zip"
+            zip -q "$zip_path" "$recipe" "${install_files[@]}"
+            echo "Built $zip_path"
+          done
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.hskin
+            dist/*.zip
+          generate_release_notes: true
