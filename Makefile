@@ -4,9 +4,11 @@ DIST_DIR := dist
 SKINS := $(notdir $(wildcard $(SKIN_DIR)/*))
 HSKIN_FILES := $(addprefix $(DIST_DIR)/,$(addsuffix .hskin,$(SKINS)))
 
-.PHONY: all hskin clean list
+.PHONY: all rebuild hskin clean list
 
-all: hskin
+all: rebuild
+
+rebuild: clean hskin
 
 hskin: $(HSKIN_FILES)
 
