@@ -33,8 +33,7 @@ Common categories:
 - `alphabetic_*` → English keyboard
 - `numeric_*` → Number keyboard
 - `symbolic_*` → Symbol keyboard
-- `floatsearch_*`, `hamstersetting` → floating/app panels
-- `resources/*.yaml` → image atlas metadata (sprite rect/insets)
+- `hamstersetting` → floating panel
 
 ### 2) `*.keyboard` (generated artifacts, not tracked)
 
@@ -58,10 +57,9 @@ Current repo policy:
 
 Recommendation: edit `.yaml` only.
 
-### 3) `resources/*.png` (theme graphics)
+### 3) `resources/*` (optional theme graphics)
 
-Image assets used by keyboard files.  
-If changing visual assets, update both image and its corresponding `resources/*.yaml` mapping.
+This skin version no longer uses the old floatsearch panel assets.
 
 ## Entry point: `config.yaml`
 

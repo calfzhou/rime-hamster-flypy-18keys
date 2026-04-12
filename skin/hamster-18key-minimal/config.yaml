@@ -58,12 +58,6 @@ emoji:
     portrait: emoji_portrait
     landscape: emoji_landscape
 
-# app功能面板
-float_app:
-  iPhone:
-    portrait: floatsearch_portrait
-    landscape: floatsearch_landscape
-
 # 浮动面板
 float_panel:
   iPhone:
