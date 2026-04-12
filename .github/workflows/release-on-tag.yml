@@ -52,10 +52,23 @@ jobs:
             echo "Built $zip_path"
           done
 
+      - name: Extract tag annotation as release notes
+        id: tag_notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag_name="${GITHUB_REF_NAME}"
+          notes="$(git tag -l --format='%(contents)' "$tag_name")"
+          {
+            echo 'body<<EOF'
+            echo "$notes"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             dist/*.hskin
             dist/*.zip
-          generate_release_notes: true
+          body: ${{ steps.tag_notes.outputs.body }}
