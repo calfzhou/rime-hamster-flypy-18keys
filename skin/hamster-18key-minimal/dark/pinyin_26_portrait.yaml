@@ -476,10 +476,10 @@ keyboardLayout:
   - HStack:
       subviews:
         - Cell: 123Button
-        - Cell: cnenButton
         - Cell: commaButton
         - Cell: spaceButton
         - Cell: dotButton
+        - Cell: cnenButton
         - Cell: enterButton
 
 
@@ -2968,7 +2968,7 @@ cnenButton:
   holdSymbolsStyle: cnenButtonHoldSymbolsStyle
 
 cnenButtonForegroundStyle:
-  assetImageName: chineseState
+  assetImageName: chineseState2
   <<: *systemButtonForegroundStyle
   center:
     y: 0.5

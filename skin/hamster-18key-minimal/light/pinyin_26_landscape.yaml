@@ -493,7 +493,6 @@ keyboardLayout:
           - HStack:
               subviews:
               - Cell: 123Button
-              - Cell: zh-enButton
               - Cell: commaButton
               - Cell: spaceButton
       - VStack:
@@ -526,6 +525,7 @@ keyboardLayout:
               subviews:
               - Cell: rightspaceButton
               - Cell: dotButton
+              - Cell: zh-enButton
               - Cell: enterButton
 
 
@@ -3085,7 +3085,7 @@ zh-enButton:
   holdSymbolsStyle: zh-enButtonHoldSymbolsStyle
 
 zh-enButtonForegroundStyle:
-  assetImageName: chineseState
+  assetImageName: chineseState2
   <<: *systemButtonForegroundStyle
   center:
     y: 0.5

@@ -470,10 +470,10 @@ keyboardLayout:
       - HStack:
           subviews:
           - Cell: 123Button
-          - Cell: zh-enButton
           - Cell: commaButton
           - Cell: spaceButton
           - Cell: dotButton
+          - Cell: zh-enButton
           - Cell: enterButton
 
 rowofFunctionStyle:
@@ -2797,7 +2797,7 @@ zh-enButton:
   action: {keyboardType: pinyin}
 
 zh-enButtonForegroundStyle:
-  assetImageName: englishState
+  assetImageName: englishState2
   <<: *systemButtonForegroundStyle
   center:
     y: 0.5
