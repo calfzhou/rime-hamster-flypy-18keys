@@ -209,13 +209,10 @@ toolbar:
   primaryButtonStyle: primaryButtonStyle
   secondaryButtonStyle:
   - toolbarButton1Style
-  - toolbarButton7Style
-#  - toolbarButton6Style
-#  - toolbarButton2Style
-#  - toolbarButton3Style
+  - toolbarButton2Style
+  - toolbarButton3Style
   - toolbarButton4Style
   - toolbarButton5Style
-
   horizontalCandidateStyle: horizontalCandidateStyle
   verticalCandidateStyle: verticalCandidateStyle
 
@@ -225,10 +222,10 @@ toolbarBackgroundStyle:
 primaryButtonStyle:
   backgroundStyle: toolbarButtonBackgroundStyle
   foregroundStyle: primaryButtonForegroundStyle
-  action: {floatKeyboardType: float_app}
+  action: {floatKeyboardType: float_panel}
 
 primaryButtonForegroundStyle:
-  systemImageName: "bubbles.and.sparkles.fill"
+  systemImageName: "r.circle"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -244,7 +241,7 @@ toolbarButton1Style:
   action: dismissKeyboard
 
 toolbarButton1ForegroundStyle:
-  systemImageName: "keyboard.chevron.compact.down.fill"
+  systemImageName: "chevron.down.circle"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -252,10 +249,10 @@ toolbarButton1ForegroundStyle:
 toolbarButton2Style:
   backgroundStyle: toolbarButtonBackgroundStyle
   foregroundStyle: toolbarButton2ForegroundStyle
-  action: {keyboardType: pinyin}
+  action: {keyboardType: symbolic}
 
 toolbarButton2ForegroundStyle:
-  assetImageName: englishState
+  systemImageName: "plus.forwardslash.minus"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -280,10 +277,10 @@ toolbarButton2ForegroundStyle:
 toolbarButton3Style:
   backgroundStyle: toolbarButtonBackgroundStyle
   foregroundStyle: toolbarButton3ForegroundStyle
-  action: {shortcutCommand: "#toggleScriptView"}
+  action: {keyboardType: emoji}
 
 toolbarButton3ForegroundStyle:
-  systemImageName: "atom"
+  systemImageName: "face.smiling"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -291,10 +288,10 @@ toolbarButton3ForegroundStyle:
 toolbarButton4Style:
   backgroundStyle: toolbarButtonBackgroundStyle
   foregroundStyle: toolbarButton4ForegroundStyle
-  action: {shortcutCommand: "#showPasteboardView"}
+  action: {shortcutCommand: "#右移"}
 
 toolbarButton4ForegroundStyle:
-  systemImageName: "list.bullet.clipboard"
+  systemImageName: "chevron.right"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -302,10 +299,10 @@ toolbarButton4ForegroundStyle:
 toolbarButton5Style:
   backgroundStyle: toolbarButtonBackgroundStyle
   foregroundStyle: toolbarButton5ForegroundStyle
-  action: {shortcutCommand: "#showPhraseView"}
+  action: {shortcutCommand: "#左移"}
 
 toolbarButton5ForegroundStyle:
-  systemImageName: "note.text"
+  systemImageName: "chevron.left"
   normalColor: E5E5EA
   highlightColor: E5E5EA
   fontSize: 1.125em
@@ -547,7 +544,7 @@ leftButton:
   backgroundStyle: alphabeticButtonBackgroundStyle
   foregroundStyle:
   - leftButtonForegroundStyle
-  action: {shortcutCommand: "#左移"}
+  action: {shortcutCommand: "#showPasteboardView"}
   swipeUpAction: {shortcutCommand: "#行首"}
   repeatAction: {shortcutCommand: "#左移"}
   # holdSymbolsStyle: leftButtonHoldSymbolsStyle
@@ -582,7 +579,7 @@ atomButton:
   backgroundStyle: alphabeticButtonBackgroundStyle
   foregroundStyle:
   - atomButtonForegroundStyle
-  action: {shortcutCommand: "#toggleScriptView"}
+  action: {keyboardType: emoji}
   holdSymbolsStyle: atomButtonHoldSymbolsStyle
 
 atomButtonForegroundStyle:

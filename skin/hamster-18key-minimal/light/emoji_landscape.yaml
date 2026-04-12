@@ -133,6 +133,92 @@ alphabeticBackgroundAnimation:
   toScale: 1
 
 
+toolbarHeight: 40 # 35
+
+toolbar:
+  backgroundStyle: toolbarBackgroundStyle
+  primaryButtonStyle: primaryButtonStyle
+  secondaryButtonStyle:
+  - toolbarButton1Style
+  - toolbarButton2Style
+  - toolbarButton3Style
+  - toolbarButton4Style
+  - toolbarButton5Style
+
+toolbarBackgroundStyle:
+  <<: *backgroundOriginalStyle
+
+primaryButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: primaryButtonForegroundStyle
+  action: {floatKeyboardType: float_panel}
+
+primaryButtonForegroundStyle:
+  systemImageName: "r.circle"
+  normalColor: 575757
+  highlightColor: 575757
+  fontSize: 1.125em
+
+toolbarButtonBackgroundStyle:
+  normalColor: 00000000
+  highlightColor: 00000000
+
+toolbarButton1Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton1ForegroundStyle
+  action: dismissKeyboard
+
+toolbarButton1ForegroundStyle:
+  systemImageName: "chevron.down.circle"
+  normalColor: 575757
+  highlightColor: 575757
+  fontSize: 1.125em
+
+toolbarButton2Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton2ForegroundStyle
+  action: {keyboardType: symbolic}
+
+toolbarButton2ForegroundStyle:
+  systemImageName: "plus.forwardslash.minus"
+  normalColor: 575757
+  highlightColor: 575757
+  fontSize: 1.125em
+
+toolbarButton3Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton3ForegroundStyle
+  action: {keyboardType: emoji}
+
+toolbarButton3ForegroundStyle:
+  systemImageName: "face.smiling"
+  normalColor: 575757
+  highlightColor: 575757
+  fontSize: 1.125em
+
+toolbarButton4Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton4ForegroundStyle
+  action: {shortcutCommand: "#右移"}
+
+toolbarButton4ForegroundStyle:
+  systemImageName: "chevron.right"
+  normalColor: 575757
+  highlightColor: 575757
+  fontSize: 1.125em
+
+toolbarButton5Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton5ForegroundStyle
+  action: {shortcutCommand: "#左移"}
+
+toolbarButton5ForegroundStyle:
+  systemImageName: "chevron.left"
+  normalColor: 575757
+  highlightColor: 575757 
+  fontSize: 1.125em
+
+
 keyboardHeight: 45vh
 keyboardLayout:
   - HStack:
