@@ -9,6 +9,8 @@ Flypy double-pinyin 18-key **schema** for Rime/Hamster:
 - `double_pinyin_flypy_18.schema.yaml`
 - `recipes/`
   - `flypy18.recipe.yaml` (Plum recipe entry)
+- `skin/`
+  - `hamster-18key-minimal/` (imported 18-key skin)
 - `design/`
   - design/plan docs for iterative refinement
 

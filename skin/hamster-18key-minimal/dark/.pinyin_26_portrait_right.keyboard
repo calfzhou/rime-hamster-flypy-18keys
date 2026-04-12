@@ -1,0 +1,4033 @@
+alphabeticButtonBackgroundStyle:
+  type: original
+  insets:
+    top: 5
+    left: 3
+    bottom: 5
+    right: 3
+  normalColor: BBBBBB66
+  highlightColor: BBBBBB66
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF1A
+  highlightBorderColor: FFFFFF1A
+  animation: alphabeticBackgroundAnimation
+alphabeticButtonForegroundStyle:
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+alphabeticCustomButtonForegroundStyle:
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+alphabeticButtonUppercasedStateForegroundStyle:
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+alphabeticSwipeUpBadgeStyle:
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+alphabeticSwipeDownBadgeStyle:
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+alphabeticHintStyle:
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+sfsymbolSwipeDownBadgeStyle:
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.25
+sfsymbolHintStyle:
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.25
+alphabeticHoldSymbolStyle:
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+alphabeticHintBackgroundStyle:
+  type: original
+  normalColor: 707070
+  borderColor: 6E6E6E
+  borderSize: 1
+  topCornerRadius: 10
+  bottomCornerRadius: 5
+alphabeticHoldSymbolsBackgroundStyle:
+  type: original
+  normalColor: 707070
+  borderColor: 6E6E6E
+  borderSize: 1
+  topCornerRadius: 10
+  bottomCornerRadius: 5
+alphabeticHoldSymbolsSelectedStyle:
+  type: original
+  normalColor: 0279FE
+  cornerRadius: 5
+systemButtonBackgroundStyle:
+  type: original
+  insets:
+    top: 5
+    left: 3
+    bottom: 5
+    right: 3
+  normalColor: '55555580'
+  highlightColor: BBBBBB80
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF14
+  highlightBorderColor: FFFFFF14
+  animation: alphabeticBackgroundAnimation
+blueSystemButtonBackgroundStyle:
+  type: original
+  insets:
+    top: 5
+    left: 3
+    bottom: 5
+    right: 3
+  normalColor: 0279FE
+  highlightColor: BBBBBB66
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF14
+  highlightBorderColor: FFFFFF14
+  animation: alphabeticBackgroundAnimation
+systemButtonForegroundStyle:
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+backgroundOriginalStyle:
+  type: original
+  normalColor: 2C2C2C03
+alphabeticBackgroundAnimation:
+- type: bounds
+  duration: 80
+  repeatCount: 1
+  fromScale: 1
+  toScale: 0.8
+- type: bounds
+  duration: 80
+  repeatCount: 1
+  fromScale: 0.8
+  toScale: 1
+preeditHeight: 20
+toolbarHeight: 40
+keyboardHeight: 226
+preedit:
+  insets:
+    left: 4
+    top: 2
+  backgroundStyle: preeditBackgroundStyle
+  foregroundStyle: preeditForegroundStyle
+preeditBackgroundStyle:
+  type: original
+  normalColor: 2C2C2C03
+preeditForegroundStyle:
+  textColor: ffffff
+  fontSize: 0.88em
+toolbar:
+  backgroundStyle: toolbarBackgroundStyle
+  primaryButtonStyle: primaryButtonStyle
+  secondaryButtonStyle:
+  - toolbarButton1Style
+  - toolbarButton7Style
+  - toolbarButton4Style
+  - toolbarButton5Style
+  horizontalCandidateStyle: horizontalCandidateStyle
+  verticalCandidateStyle: verticalCandidateStyle
+  candidateContextMenu: candidateContextMenuStyle
+candidateContextMenuStyle:
+- name: "\u5DE6\u79FB"
+  action:
+    sendKeys: "Control+j"
+- name: "\u53F3\u79FB"
+  action:
+    sendKeys: "Control+k"
+- name: "\u91CD\u7F6E"
+  action:
+    sendKeys: "Control+l"
+- name: "\u7F6E\u9876"
+  action:
+    sendKeys: "Control+p"
+toolbarBackgroundStyle:
+  type: original
+  normalColor: 2C2C2C03
+primaryButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: primaryButtonForegroundStyle
+  action:
+    floatKeyboardType: float_app
+primaryButtonForegroundStyle:
+  systemImageName: "bubbles.and.sparkles.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButtonBackgroundStyle:
+  normalColor: 00000000
+  highlightColor: 00000000
+toolbarButton1Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton1ForegroundStyle
+  action: dismissKeyboard
+toolbarButton1ForegroundStyle:
+  systemImageName: "keyboard.chevron.compact.down.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton2Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton2ForegroundStyle
+  action:
+    keyboardType: alphabetic
+toolbarButton2ForegroundStyle:
+  assetImageName: chineseState
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton3Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton3ForegroundStyle
+  action:
+    shortcutCommand: "#toggleScriptView"
+toolbarButton3ForegroundStyle:
+  systemImageName: "atom"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton4Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton4ForegroundStyle
+  action:
+    shortcutCommand: "#showPasteboardView"
+toolbarButton4ForegroundStyle:
+  systemImageName: "list.bullet.clipboard"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton5Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton5ForegroundStyle
+  action:
+    shortcutCommand: "#showPhraseView"
+toolbarButton5ForegroundStyle:
+  systemImageName: "note.text"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton6Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton6ForegroundStyle
+  action:
+    keyboardType: emoji
+toolbarButton6ForegroundStyle:
+  systemImageName: "face.dashed.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+toolbarButton7Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton7ForegroundStyle
+  action:
+    floatKeyboardType: float_panel
+toolbarButton7ForegroundStyle:
+  systemImageName: "gearshape.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+horizontalCandidateStyle:
+  insets:
+    left: 3
+    bottom: 1
+    top: 3
+  candidateStateButtonStyle: candidateStateButtonStyle
+  highlightBackgroundColor: 00000033
+  preferredBackgroundColor: 00000033
+  preferredIndexColor: ffffff
+  preferredTextColor: ffffff
+  preferredCommentColor: ffffff
+  indexColor: ffffff
+  textColor: ffffff
+  commentColor: ffffff
+  indexFontSize: 1.19em
+  textFontSize: 1.19em
+  commentFontSize: 0.5em
+candidateStateButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: candidateStateButtonForegroundStyle
+candidateStateButtonForegroundStyle:
+  systemImageName: "chevron.down"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+verticalCandidateStyle:
+  insets:
+    top: 3
+    bottom: 3
+    left: 4
+    right: 4
+  bottomRowHeight: 50
+  backgroundStyle: verticalCandidateBackgroundStyle
+  candidateStyle: verticalCandidateOfCandidateStyle
+  pageUpButtonStyle: verticalCandidatePageUpButtonStyle
+  pageDownButtonStyle: verticalCandidatePageDownButtonStyle
+  returnButtonStyle: verticalCandidateReturnButtonStyle
+  backspaceButtonStyle: verticalCandidateBackspaceButtonStyle
+verticalCandidateBackgroundStyle:
+  type: original
+  normalColor: 2C2C2C03
+verticalCandidateOfCandidateStyle:
+  insets:
+    top: 8
+    bottom: 8
+    left: 8
+    right: 8
+  backgroundColor: ffffff00
+  separatorColor: 383838
+  highlightBackgroundColor: 00000000
+  preferredBackgroundColor: 00000000
+  preferredIndexColor: 1a73e9
+  preferredTextColor: 1a73e9
+  preferredCommentColor: 1a73e9
+  indexColor: ffffff
+  textColor: ffffff
+  commentColor: ffffff
+  indexFontSize: 8
+  textFontSize: 18
+  commentFontSize: 8
+verticalCandidatePageUpButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
+verticalCandidateButtonBackgroundStyle:
+  type: original
+  insets:
+    top: 5
+    left: 3
+    bottom: 5
+    right: 3
+  normalColor: '55555580'
+  highlightColor: BBBBBB80
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF14
+  highlightBorderColor: FFFFFF14
+  animation: alphabeticBackgroundAnimation
+verticalCandidatePageUpButtonForegroundStyle:
+  systemImageName: "chevron.up"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+verticalCandidatePageDownButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
+verticalCandidatePageDownButtonForegroundStyle:
+  systemImageName: "chevron.down"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+verticalCandidateReturnButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidateReturnButtonForegroundStyle
+verticalCandidateReturnButtonForegroundStyle:
+  systemImageName: "return"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+verticalCandidateBackspaceButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle:
+  - verticalCandidateBackspaceButtonForegroundStyle
+verticalCandidateBackspaceButtonForegroundStyle:
+  systemImageName: "delete.left"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+keyboardLayout:
+- VStack:
+    style: rowofFunctionStyle
+    subviews:
+    - HStack:
+        subviews:
+        - Cell: fullhandButton
+- VStack:
+    style: keyboardStyle
+    subviews:
+    - HStack:
+        subviews:
+        - Cell: hButton
+        - Cell: sButton
+        - Cell: zButton
+        - Cell: bButton
+        - Cell: xButton
+        - Cell: mButton
+    - HStack:
+        subviews:
+        - Cell: lButton
+        - Cell: dButton
+        - Cell: yButton
+        - Cell: wButton
+        - Cell: jButton
+        - Cell: nButton
+    - HStack:
+        subviews:
+        - Cell: cButton
+        - Cell: qButton
+        - Cell: gButton
+        - Cell: fButton
+        - Cell: tButton
+        - Cell: backspaceButton
+    - HStack:
+        subviews:
+        - Cell: 123Button
+        - Cell: cnenButton
+        - Cell: commaButton
+        - Cell: spaceButton
+        - Cell: dotButton
+        - Cell: enterButton
+rowofFunctionStyle:
+  size:
+    width: 12/65
+  backgroundStyle: keyboardBackgroundStyle
+keyboardStyle:
+  size:
+    height: 200
+    width: 53/65
+  backgroundStyle: keyboardBackgroundStyle
+keyboardBackgroundStyle:
+  type: original
+  normalColor: 2C2C2C03
+onehandBackgroundStyle:
+  type: original
+  insets:
+    top: 5
+    left: 3
+    bottom: 5
+    right: 3
+  normalColor: 2C2C2C03
+  highlightColor: 2C2C2C03
+  cornerRadius: 5
+fullhandButton:
+  backgroundStyle: onehandBackgroundStyle
+  foregroundStyle:
+  - fullhandButtonForegroundStyle
+  action:
+    keyboardType: pinyin
+fullhandButtonForegroundStyle:
+  systemImageName: "chevron.compact.left"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 2.2em
+leftButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - leftButtonForegroundStyle
+  preeditStateForegroundStyle: leftpreeditStateForegroundStyle
+  action:
+    shortcutCommand: "#\u5DE6\u79FB"
+  swipeUpAction:
+    shortcutCommand: "#\u884C\u9996"
+  swipeDownAction:
+    character: "["
+  preeditStateAction:
+    sendKeys: "Up"
+  repeatAction:
+    shortcutCommand: "#\u5DE6\u79FB"
+leftButtonForegroundStyle:
+  systemImageName: "arrowshape.turn.up.left.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+leftButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - leftButtonHoldSymbolsForegroundStyle
+  - leftButtonHoldSymbolsForegroundStyle2
+  actions:
+  - shortcutCommand: "#\u884C\u9996"
+  - character: "["
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+leftButtonHoldSymbolsForegroundStyle:
+  systemImageName: "arrowshape.left.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+leftButtonHoldSymbolsForegroundStyle2:
+  systemImageName: "square.filled.and.line.vertical.and.square"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+leftpreeditStateForegroundStyle:
+  systemImageName: "square.filled.and.line.vertical.and.square"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+atomButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - atomButtonForegroundStyle
+  preeditStateForegroundStyle: uppreeditStateForegroundStyle
+  preeditStateAction:
+    sendKeys: "Control+Shift+Up"
+  action:
+    shortcutCommand: "#toggleScriptView"
+  holdSymbolsStyle: atomButtonHoldSymbolsStyle
+uppreeditStateForegroundStyle:
+  systemImageName: "arrowtriangle.up.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+atomButtonForegroundStyle:
+  systemImageName: "atom"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+atomButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - atomButtonForegroundStyle1
+  - atomButtonForegroundStyle2
+  - atomButtonForegroundStyle3
+  actions:
+  - openURL: "https://www.google.com/search?q=#pasteboardContent"
+  - openURL: "#pasteboardContent"
+  - openURL: "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=#pasteboardContent"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+atomButtonForegroundStyle1:
+  systemImageName: "g.circle.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+atomButtonForegroundStyle2:
+  systemImageName: "safari.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+atomButtonForegroundStyle3:
+  systemImageName: "apple.logo"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rimeButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rimeButtonForegroundStyle
+  preeditStateForegroundStyle: rimepreeditStateForegroundStyle
+  action:
+    runTranslateScript: Translator
+  preeditStateAction:
+    character: "7"
+rimeButtonForegroundStyle:
+  systemImageName: "bonjour"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+rimeButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rimeButtonHoldSymbolsOffirstForegroundStyle
+  - rimeButtonHoldSymbolsOfsecondForegroundStyle
+  - rimeButtonHoldSymbolsOfthirdForegroundStyle
+  actions:
+  - openURL: "https://www.google.com/search?q=#pasteboardContent"
+  - openURL: "#pasteboardContent"
+  - openURL: "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=#pasteboardContent"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+rimeButtonHoldSymbolsOffirstForegroundStyle:
+  systemImageName: "g.circle.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rimeButtonHoldSymbolsOfsecondForegroundStyle:
+  systemImageName: "safari.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rimeButtonHoldSymbolsOfthirdForegroundStyle:
+  systemImageName: "apple.logo"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rimepreeditStateForegroundStyle:
+  systemImageName: "arrow.right"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+cutButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  preeditStateForegroundStyle: cutpreeditStateForegroundStyle
+  foregroundStyle:
+  - cutButtonForegroundStyle
+  action:
+    shortcutCommand: "#\u526A\u5207"
+  preeditStateAction:
+    character: "8"
+  holdSymbolsStyle: cutButtonHoldSymbolsStyle
+cutButtonForegroundStyle:
+  systemImageName: "scissors"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+cutButtonHoldSymbolsStyle:
+  actions:
+    openURL: "hamster://dev.fuxiao.app.hamster/clipboard"
+cutpreeditStateForegroundStyle:
+  systemImageName: "arrow.up.right"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+copyButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - copyButtonForegroundStyle
+  preeditStateForegroundStyle: copypreeditStateForegroundStyle
+  action:
+    shortcutCommand: "#\u590D\u5236"
+  preeditStateAction:
+    character: "9"
+  holdSymbolsStyle: copyButtonHoldSymbolsStyle
+copyButtonForegroundStyle:
+  systemImageName: "arrow.up.doc.on.clipboard"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+copyButtonHoldSymbolsStyle:
+  actions:
+    openURL: "#showPhraseView"
+copypreeditStateForegroundStyle:
+  systemImageName: "arrow.uturn.up"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+pasteButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - pasteButtonForegroundStyle
+  preeditStateForegroundStyle: pastepreeditStateForegroundStyle
+  action:
+    shortcutCommand: "#\u7C98\u8D34"
+  preeditStateAction:
+    character: "0"
+  holdSymbolsStyle: pasteButtonHoldSymbolsStyle
+pasteButtonForegroundStyle:
+  systemImageName: "doc.on.clipboard.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+pasteButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - pasteButtonForegroundStyle1
+  - pasteButtonForegroundStyle2
+  actions:
+  - shortcutCommand: '#showPhraseView'
+  - shortcutCommand: '#showPasteboardView'
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+pasteButtonForegroundStyle1:
+  systemImageName: note.text
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+pasteButtonForegroundStyle2:
+  systemImageName: list.bullet.clipboard
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+pastepreeditStateForegroundStyle:
+  systemImageName: "arrow.down.right"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+selectButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - selectButtonForegroundStyle
+  preeditStateForegroundStyle: downpreeditStateForegroundStyle
+  preeditStateAction:
+    sendKeys: "Control+Shift+Down"
+  action:
+    shortcutCommand: "#selectText"
+  holdSymbolsStyle: selectButtonHoldSymbolsStyle
+downpreeditStateForegroundStyle:
+  systemImageName: "arrowtriangle.down.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+selectButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - selectButtonForegroundStyle1
+  - selectButtonForegroundStyle2
+  actions:
+  - shortcutCommand: "#\u64A4\u9500"
+  - shortcutCommand: "#\u91CD\u505A"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+selectButtonForegroundStyle1:
+  systemImageName: arrow.uturn.left.circle.fill
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+selectButtonForegroundStyle2:
+  systemImageName: arrow.uturn.right.circle.fill
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+selectButtonForegroundStyle:
+  systemImageName: "square.grid.3x3.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+rightButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rightButtonForegroundStyle
+  preeditStateForegroundStyle: rightpreeditStateForegroundStyle
+  action:
+    shortcutCommand: "#\u53F3\u79FB"
+  swipeUpAction:
+    shortcutCommand: "#\u884C\u5C3E"
+  swipeDownAction:
+    character: "]"
+  preeditStateAction:
+    sendKeys: "Down"
+  repeatAction:
+    shortcutCommand: "#\u53F3\u79FB"
+rightButtonForegroundStyle:
+  systemImageName: "arrowshape.turn.up.right.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+rightButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rightButtonHoldSymbolsForegroundStyle2
+  - rightButtonHoldSymbolsForegroundStyle
+  actions:
+  - character: "]"
+  - shortcutCommand: "#\u884C\u5C3E"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+rightButtonHoldSymbolsForegroundStyle:
+  systemImageName: "arrowshape.right.fill"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rightButtonHoldSymbolsForegroundStyle2:
+  systemImageName: "square.and.line.vertical.and.square.filled"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rightpreeditStateForegroundStyle:
+  systemImageName: "square.and.line.vertical.and.square.filled"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  center:
+    x: 0.5
+    y: 0.5
+qButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - qButtonForegroundStyle
+  - qButtonUpForegroundStyle
+  - qButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - qButtonUppercasedStateForegroundStyle
+  - qButtonUpForegroundStyle
+  - qButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - qButtonUppercasedStateForegroundStyle
+  - qButtonUpForegroundStyle
+  - qButtonDownForegroundStyle
+  hintStyle: qButtonHintStyle
+  action:
+    character: "q"
+  uppercasedStateAction:
+    character: "Q"
+  swipeUpAction:
+    shortcutCommand: "#\u884C\u9996"
+  swipeDownAction:
+    shortcutCommand: "#\u590D\u5236"
+  holdSymbolsStyle: qButtonHoldSymbolsStyle
+qButtonForegroundStyle:
+  text: "Q~"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+qButtonUppercasedStateForegroundStyle:
+  text: "Q"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+qButtonUpForegroundStyle:
+  text: "\u884C\u9996"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+qButtonDownForegroundStyle:
+  text: "\u590D\u5236"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+qButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: qButtonHintForegroundStyle
+  swipeUpForegroundStyle: qButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: qButtonSwipeDownHintForegroundStyle
+qButtonHintForegroundStyle:
+  text: "Q"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+qButtonSwipeUpHintForegroundStyle:
+  text: "\u884C\u9996"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+qButtonSwipeDownHintForegroundStyle:
+  text: "\u590D\u5236"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+qButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - qButtonForegroundStyle1
+  actions:
+  - character: "q"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+qButtonForegroundStyle1:
+  text: "q"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+wButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - wButtonForegroundStyle
+  - wButtonUpForegroundStyle
+  - wButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - wButtonUppercasedStateForegroundStyle
+  - wButtonUpForegroundStyle
+  - wButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - wButtonUppercasedStateForegroundStyle
+  - wButtonUpForegroundStyle
+  - wButtonDownForegroundStyle
+  hintStyle: wButtonHintStyle
+  action:
+    character: "w"
+  uppercasedStateAction:
+    character: "W"
+  swipeUpAction:
+    character: ")"
+  swipeDownAction:
+    character: "9"
+  holdSymbolsStyle: wButtonHoldSymbolsStyle
+wButtonForegroundStyle:
+  text: "WZ"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+wButtonUppercasedStateForegroundStyle:
+  text: "W"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+wButtonUpForegroundStyle:
+  text: ")"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+wButtonDownForegroundStyle:
+  text: "9"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+wButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: wButtonHintForegroundStyle
+  swipeUpForegroundStyle: wButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: wButtonSwipeDownHintForegroundStyle
+wButtonHintForegroundStyle:
+  text: "W"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+wButtonSwipeUpHintForegroundStyle:
+  text: ")"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+wButtonSwipeDownHintForegroundStyle:
+  text: "9"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+wButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - wButtonForegroundStyle1
+  - wButtonForegroundStyle2
+  - wButtonForegroundStyle3
+  actions:
+  - character: "w"
+  - character: "e"
+  - symbol: "\u2792"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+wButtonForegroundStyle1:
+  text: "w"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+wButtonForegroundStyle2:
+  text: "e"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+wButtonForegroundStyle3:
+  text: "\u2792"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+eButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - eButtonForegroundStyle
+  - eButtonUpForegroundStyle
+  - eButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - eButtonUppercasedStateForegroundStyle
+  - eButtonUpForegroundStyle
+  - eButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - eButtonUppercasedStateForegroundStyle
+  - eButtonUpForegroundStyle
+  - eButtonDownForegroundStyle
+  hintStyle: eButtonHintStyle
+  action:
+    character: e
+  uppercasedStateAction:
+    character: E
+  swipeUpAction:
+    character: '3'
+  holdSymbolsStyle: eButtonHoldSymbolsStyle
+  swipeDownAction:
+    character: '#'
+eButtonForegroundStyle:
+  text: "e"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+eButtonUppercasedStateForegroundStyle:
+  text: "E"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+eButtonUpForegroundStyle:
+  text: '3'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+eButtonDownForegroundStyle:
+  text: '#'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+eButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: eButtonHintForegroundStyle
+  swipeUpForegroundStyle: eButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: eButtonSwipeDownHintForegroundStyle
+eButtonHintForegroundStyle:
+  text: E
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+eButtonSwipeUpHintForegroundStyle:
+  text: '3'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+eButtonSwipeDownHintForegroundStyle:
+  text: '#'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+eButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - eButtonForegroundStyle1
+  - eButtonForegroundStyle2
+  - eButtonForegroundStyle3
+  actions:
+  - character: e
+  - character: E
+  - symbol: "\u278C"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+eButtonForegroundStyle1:
+  text: e
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+eButtonForegroundStyle2:
+  text: E
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+eButtonForegroundStyle3:
+  text: "\u278C"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rButtonForegroundStyle
+  - rButtonUpForegroundStyle
+  - rButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - rButtonUppercasedStateForegroundStyle
+  - rButtonUpForegroundStyle
+  - rButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - rButtonUppercasedStateForegroundStyle
+  - rButtonUpForegroundStyle
+  - rButtonDownForegroundStyle
+  hintStyle: rButtonHintStyle
+  holdSymbolsStyle: rButtonHoldSymbolsStyle
+  action:
+    character: r
+  uppercasedStateAction:
+    character: R
+  swipeUpAction:
+    character: '4'
+  swipeDownAction:
+    character: $
+rButtonForegroundStyle:
+  text: "r"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+rButtonUppercasedStateForegroundStyle:
+  text: "R"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+rButtonUpForegroundStyle:
+  text: '4'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+rButtonDownForegroundStyle:
+  text: $
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+rButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: rButtonHintForegroundStyle
+  swipeUpForegroundStyle: rButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: rButtonSwipeDownHintForegroundStyle
+rButtonHintForegroundStyle:
+  text: R
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+rButtonSwipeUpHintForegroundStyle:
+  text: '4'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+rButtonSwipeDownHintForegroundStyle:
+  text: $
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+rButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rButtonForegroundStyle1
+  - rButtonForegroundStyle2
+  - rButtonForegroundStyle3
+  actions:
+  - character: r
+  - character: R
+  - symbol: "\u278D"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+rButtonForegroundStyle1:
+  text: r
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rButtonForegroundStyle2:
+  text: R
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+rButtonForegroundStyle3:
+  text: "\u278D"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+tButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - tButtonForegroundStyle
+  - tButtonUpForegroundStyle
+  - tButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - tButtonUppercasedStateForegroundStyle
+  - tButtonUpForegroundStyle
+  - tButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - tButtonUppercasedStateForegroundStyle
+  - tButtonUpForegroundStyle
+  - tButtonDownForegroundStyle
+  hintStyle: tButtonHintStyle
+  action:
+    character: "t"
+  uppercasedStateAction:
+    character: "T"
+  swipeUpAction:
+    character: "\""
+  swipeDownAction:
+    character: "?"
+  holdSymbolsStyle: tButtonHoldSymbolsStyle
+tButtonForegroundStyle:
+  text: "T"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+tButtonUppercasedStateForegroundStyle:
+  text: "T"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+tButtonUpForegroundStyle:
+  text: "\""
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+tButtonDownForegroundStyle:
+  text: "?"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+tButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: tButtonHintForegroundStyle
+  swipeUpForegroundStyle: tButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: tButtonSwipeDownHintForegroundStyle
+tButtonHintForegroundStyle:
+  text: "T"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+tButtonSwipeUpHintForegroundStyle:
+  text: "\""
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+tButtonSwipeDownHintForegroundStyle:
+  text: "?"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+tButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - tButtonForegroundStyle1
+  actions:
+  - character: "t"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+tButtonForegroundStyle1:
+  text: "t"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+yButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - yButtonForegroundStyle
+  - yButtonUpForegroundStyle
+  - yButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - yButtonUppercasedStateForegroundStyle
+  - yButtonUpForegroundStyle
+  - yButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - yButtonUppercasedStateForegroundStyle
+  - yButtonUpForegroundStyle
+  - yButtonDownForegroundStyle
+  hintStyle: yButtonHintStyle
+  action:
+    character: "y"
+  uppercasedStateAction:
+    character: "Y"
+  swipeUpAction:
+    character: "("
+  swipeDownAction:
+    character: "8"
+  holdSymbolsStyle: yButtonHoldSymbolsStyle
+yButtonForegroundStyle:
+  text: "Y"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+yButtonUppercasedStateForegroundStyle:
+  text: "Y"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+yButtonUpForegroundStyle:
+  text: "("
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+yButtonDownForegroundStyle:
+  text: "8"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+yButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: yButtonHintForegroundStyle
+  swipeUpForegroundStyle: yButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: yButtonSwipeDownHintForegroundStyle
+yButtonHintForegroundStyle:
+  text: "Y"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+yButtonSwipeUpHintForegroundStyle:
+  text: "("
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+yButtonSwipeDownHintForegroundStyle:
+  text: "8"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+yButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - yButtonForegroundStyle1
+  - yButtonForegroundStyle2
+  actions:
+  - character: "y"
+  - symbol: "\u2791"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+yButtonForegroundStyle1:
+  text: "y"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+yButtonForegroundStyle2:
+  text: "\u2791"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+uButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - uButtonForegroundStyle
+  - uButtonUpForegroundStyle
+  - uButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - uButtonUppercasedStateForegroundStyle
+  - uButtonUpForegroundStyle
+  - uButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - uButtonUppercasedStateForegroundStyle
+  - uButtonUpForegroundStyle
+  - uButtonDownForegroundStyle
+  hintStyle: uButtonHintStyle
+  holdSymbolsStyle: uButtonHoldSymbolsStyle
+  action:
+    character: u
+  uppercasedStateAction:
+    character: U
+  swipeUpAction:
+    character: '7'
+  swipeDownAction:
+    character: '&'
+uButtonForegroundStyle:
+  text: "u"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+uButtonUppercasedStateForegroundStyle:
+  text: "U"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+uButtonUpForegroundStyle:
+  text: '7'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+uButtonDownForegroundStyle:
+  text: '&'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+uButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: uButtonHintForegroundStyle
+  swipeUpForegroundStyle: uButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: uButtonSwipeDownHintForegroundStyle
+uButtonHintForegroundStyle:
+  text: U
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+uButtonSwipeUpHintForegroundStyle:
+  text: '7'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+uButtonSwipeDownHintForegroundStyle:
+  text: '&'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+uButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - uButtonForegroundStyle1
+  - uButtonForegroundStyle2
+  - uButtonForegroundStyle3
+  actions:
+  - character: u
+  - character: U
+  - symbol: "\u2790"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+uButtonForegroundStyle1:
+  text: u
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+uButtonForegroundStyle2:
+  text: U
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+uButtonForegroundStyle3:
+  text: "\u2790"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+iButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - iButtonForegroundStyle
+  - iButtonUpForegroundStyle
+  - iButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - iButtonUppercasedStateForegroundStyle
+  - iButtonUpForegroundStyle
+  - iButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - iButtonUppercasedStateForegroundStyle
+  - iButtonUpForegroundStyle
+  - iButtonDownForegroundStyle
+  hintStyle: iButtonHintStyle
+  holdSymbolsStyle: iButtonHoldSymbolsStyle
+  action:
+    character: i
+  uppercasedStateAction:
+    character: I
+  swipeUpAction:
+    character: '8'
+  swipeDownAction:
+    character: '*'
+iButtonForegroundStyle:
+  text: "i"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+iButtonUppercasedStateForegroundStyle:
+  text: "I"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+iButtonUpForegroundStyle:
+  text: '8'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+iButtonDownForegroundStyle:
+  text: '*'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+iButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: iButtonHintForegroundStyle
+  swipeUpForegroundStyle: iButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: iButtonSwipeDownHintForegroundStyle
+iButtonHintForegroundStyle:
+  text: I
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+iButtonSwipeUpHintForegroundStyle:
+  text: '8'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+iButtonSwipeDownHintForegroundStyle:
+  text: '*'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+iButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - iButtonForegroundStyle1
+  - iButtonForegroundStyle2
+  - iButtonForegroundStyle3
+  actions:
+  - character: i
+  - character: I
+  - symbol: "\u2791"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+iButtonForegroundStyle1:
+  text: i
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+iButtonForegroundStyle2:
+  text: I
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+iButtonForegroundStyle3:
+  text: "\u2791"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+oButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - oButtonForegroundStyle
+  - oButtonUpForegroundStyle
+  - oButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - oButtonUppercasedStateForegroundStyle
+  - oButtonUpForegroundStyle
+  - oButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - oButtonUppercasedStateForegroundStyle
+  - oButtonUpForegroundStyle
+  - oButtonDownForegroundStyle
+  hintStyle: oButtonHintStyle
+  holdSymbolsStyle: oButtonHoldSymbolsStyle
+  action:
+    character: o
+  uppercasedStateAction:
+    character: O
+  swipeUpAction:
+    character: '9'
+  swipeDownAction:
+    character: (
+oButtonForegroundStyle:
+  text: "o"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+oButtonUppercasedStateForegroundStyle:
+  text: "O"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+oButtonUpForegroundStyle:
+  text: '9'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+oButtonDownForegroundStyle:
+  text: (
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+oButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: oButtonHintForegroundStyle
+  swipeUpForegroundStyle: oButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: oButtonSwipeDownHintForegroundStyle
+oButtonHintForegroundStyle:
+  text: O
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+oButtonSwipeUpHintForegroundStyle:
+  text: '9'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+oButtonSwipeDownHintForegroundStyle:
+  text: (
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+oButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - oButtonForegroundStyle1
+  - oButtonForegroundStyle2
+  - oButtonForegroundStyle3
+  actions:
+  - character: o
+  - character: O
+  - symbol: "\u2792"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+oButtonForegroundStyle1:
+  text: o
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+oButtonForegroundStyle2:
+  text: O
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+oButtonForegroundStyle3:
+  text: "\u2792"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+pButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - pButtonForegroundStyle
+  - pButtonUpForegroundStyle
+  - pButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - pButtonUppercasedStateForegroundStyle
+  - pButtonUpForegroundStyle
+  - pButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - pButtonUppercasedStateForegroundStyle
+  - pButtonUpForegroundStyle
+  - pButtonDownForegroundStyle
+  hintStyle: pButtonHintStyle
+  action:
+    character: p
+  uppercasedStateAction:
+    character: P
+  swipeUpAction:
+    character: '0'
+  holdSymbolsStyle: pButtonHoldSymbolsStyle
+  swipeDownAction:
+    character: )
+pButtonForegroundStyle:
+  text: "p"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+pButtonUppercasedStateForegroundStyle:
+  text: "P"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+pButtonUpForegroundStyle:
+  text: '0'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+pButtonDownForegroundStyle:
+  text: )
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+pButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: pButtonHintForegroundStyle
+  swipeUpForegroundStyle: pButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: pButtonSwipeDownHintForegroundStyle
+pButtonHintForegroundStyle:
+  text: P
+  fontSize: 1.75em
+  center:
+    x: 0.43
+    y: 0.5
+  normalColor: E5E5EA
+pButtonSwipeUpHintForegroundStyle:
+  text: '0'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+pButtonSwipeDownHintForegroundStyle:
+  text: )
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+pButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - pButtonForegroundStyle1
+  - pButtonForegroundStyle2
+  - pButtonForegroundStyle3
+  actions:
+  - character: p
+  - character: P
+  - symbol: "\U0001F10C"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+pButtonForegroundStyle1:
+  text: p
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+pButtonForegroundStyle2:
+  text: P
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+pButtonForegroundStyle3:
+  text: "\U0001F10C"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+aButton:
+  size:
+    width: 168.75/1125
+  bounds:
+    width: 112.5/168.75
+    alignment: right
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - aButtonForegroundStyle
+  - aButtonUpForegroundStyle
+  - aButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - aButtonUppercasedStateForegroundStyle
+  - aButtonUpForegroundStyle
+  - aButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - aButtonUppercasedStateForegroundStyle
+  - aButtonUpForegroundStyle
+  - aButtonDownForegroundStyle
+  hintStyle: aButtonHintStyle
+  action:
+    character: a
+  uppercasedStateAction:
+    character: A
+  swipeUpAction:
+    character: "\u3001"
+  swipeDownAction:
+    character: '`'
+  holdSymbolsStyle: aButtonHoldSymbolsStyle
+aButtonForegroundStyle:
+  text: "a"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+aButtonUppercasedStateForegroundStyle:
+  text: "A"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+aButtonUpForegroundStyle:
+  text: "\u3001"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+aButtonDownForegroundStyle:
+  text: '`'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+aButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: aButtonHintForegroundStyle
+  swipeUpForegroundStyle: aButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: aButtonSwipeDownHintForegroundStyle
+aButtonHintForegroundStyle:
+  text: A
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+aButtonSwipeUpHintForegroundStyle:
+  text: "\u3001"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+aButtonSwipeDownHintForegroundStyle:
+  text: '`'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+aButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - aButtonForegroundStyle1
+  - aButtonForegroundStyle2
+  actions:
+  - character: a
+  - character: A
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+aButtonForegroundStyle1:
+  text: a
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+aButtonForegroundStyle2:
+  text: A
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+sButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - sButtonForegroundStyle
+  - sButtonUpForegroundStyle
+  - sButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - sButtonUppercasedStateForegroundStyle
+  - sButtonUpForegroundStyle
+  - sButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - sButtonUppercasedStateForegroundStyle
+  - sButtonUpForegroundStyle
+  - sButtonDownForegroundStyle
+  hintStyle: sButtonHintStyle
+  action:
+    character: "s"
+  uppercasedStateAction:
+    character: "S"
+  swipeUpAction:
+    character: "@"
+  swipeDownAction:
+    character: "2"
+  holdSymbolsStyle: sButtonHoldSymbolsStyle
+sButtonForegroundStyle:
+  text: "Sh"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+sButtonUppercasedStateForegroundStyle:
+  text: "S"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+sButtonUpForegroundStyle:
+  text: "@"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+sButtonDownForegroundStyle:
+  text: "2"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+sButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: sButtonHintForegroundStyle
+  swipeUpForegroundStyle: sButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: sButtonSwipeDownHintForegroundStyle
+sButtonHintForegroundStyle:
+  text: "S"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+sButtonSwipeUpHintForegroundStyle:
+  text: "@"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+sButtonSwipeDownHintForegroundStyle:
+  text: "2"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+sButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - sButtonForegroundStyle1
+  - sButtonForegroundStyle2
+  actions:
+  - character: "s"
+  - symbol: "\u278B"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+sButtonForegroundStyle1:
+  text: "s"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+sButtonForegroundStyle2:
+  text: "\u278B"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+dButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - dButtonForegroundStyle
+  - dButtonUpForegroundStyle
+  - dButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - dButtonUppercasedStateForegroundStyle
+  - dButtonUpForegroundStyle
+  - dButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - dButtonUppercasedStateForegroundStyle
+  - dButtonUpForegroundStyle
+  - dButtonDownForegroundStyle
+  hintStyle: dButtonHintStyle
+  action:
+    character: "d"
+  uppercasedStateAction:
+    character: "D"
+  swipeUpAction:
+    character: "*"
+  swipeDownAction:
+    character: "7"
+  holdSymbolsStyle: dButtonHoldSymbolsStyle
+dButtonForegroundStyle:
+  text: "D"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+dButtonUppercasedStateForegroundStyle:
+  text: "D"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+dButtonUpForegroundStyle:
+  text: "*"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+dButtonDownForegroundStyle:
+  text: "7"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+dButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: dButtonHintForegroundStyle
+  swipeUpForegroundStyle: dButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: dButtonSwipeDownHintForegroundStyle
+dButtonHintForegroundStyle:
+  text: "D"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+dButtonSwipeUpHintForegroundStyle:
+  text: "*"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+dButtonSwipeDownHintForegroundStyle:
+  text: "7"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+dButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - dButtonForegroundStyle1
+  - dButtonForegroundStyle2
+  - dButtonForegroundStyle3
+  actions:
+  - character: "d"
+  - character: "u"
+  - symbol: "\u2790"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+dButtonForegroundStyle1:
+  text: "d"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+dButtonForegroundStyle2:
+  text: "u"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+dButtonForegroundStyle3:
+  text: "\u2790"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+fButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - fButtonForegroundStyle
+  - fButtonUpForegroundStyle
+  - fButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - fButtonUppercasedStateForegroundStyle
+  - fButtonUpForegroundStyle
+  - fButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - fButtonUppercasedStateForegroundStyle
+  - fButtonUpForegroundStyle
+  - fButtonDownForegroundStyle
+  hintStyle: fButtonHintStyle
+  action:
+    character: "f"
+  uppercasedStateAction:
+    character: "F"
+  swipeUpAction:
+    character: "/"
+  swipeDownAction:
+    character: "\\"
+  holdSymbolsStyle: fButtonHoldSymbolsStyle
+fButtonForegroundStyle:
+  text: "CF"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+fButtonUppercasedStateForegroundStyle:
+  text: "F"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+fButtonUpForegroundStyle:
+  text: "/"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+fButtonDownForegroundStyle:
+  text: "\\"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+fButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: fButtonHintForegroundStyle
+  swipeUpForegroundStyle: fButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: fButtonSwipeDownHintForegroundStyle
+fButtonHintForegroundStyle:
+  text: "F"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+fButtonSwipeUpHintForegroundStyle:
+  text: "/"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+fButtonSwipeDownHintForegroundStyle:
+  text: "\\"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+fButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - fButtonForegroundStyle1
+  actions:
+  - character: "f"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+fButtonForegroundStyle1:
+  text: "f"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+gButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - gButtonForegroundStyle
+  - gButtonUpForegroundStyle
+  - gButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - gButtonUppercasedStateForegroundStyle
+  - gButtonUpForegroundStyle
+  - gButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - gButtonUppercasedStateForegroundStyle
+  - gButtonUpForegroundStyle
+  - gButtonDownForegroundStyle
+  hintStyle: gButtonHintStyle
+  action:
+    character: "g"
+  uppercasedStateAction:
+    character: "G"
+  swipeUpAction:
+    shortcutCommand: "#\u884C\u5C3E"
+  swipeDownAction:
+    shortcutCommand: "#\u7C98\u8D34"
+  holdSymbolsStyle: gButtonHoldSymbolsStyle
+gButtonForegroundStyle:
+  text: "G"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+gButtonUppercasedStateForegroundStyle:
+  text: "G"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+gButtonUpForegroundStyle:
+  text: "\u884C\u5C3E"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+gButtonDownForegroundStyle:
+  text: "\u7C98\u8D34"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+gButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: gButtonHintForegroundStyle
+  swipeUpForegroundStyle: gButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: gButtonSwipeDownHintForegroundStyle
+gButtonHintForegroundStyle:
+  text: "G"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+gButtonSwipeUpHintForegroundStyle:
+  text: "\u884C\u5C3E"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+gButtonSwipeDownHintForegroundStyle:
+  text: "\u7C98\u8D34"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+gButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - gButtonForegroundStyle1
+  actions:
+  - character: "g"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+gButtonForegroundStyle1:
+  text: "g"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+hButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - hButtonForegroundStyle
+  - hButtonUpForegroundStyle
+  - hButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - hButtonUppercasedStateForegroundStyle
+  - hButtonUpForegroundStyle
+  - hButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - hButtonUppercasedStateForegroundStyle
+  - hButtonUpForegroundStyle
+  - hButtonDownForegroundStyle
+  hintStyle: hButtonHintStyle
+  action:
+    character: "h"
+  uppercasedStateAction:
+    character: "H"
+  swipeUpAction:
+    character: "!"
+  swipeDownAction:
+    character: "1"
+  holdSymbolsStyle: hButtonHoldSymbolsStyle
+hButtonForegroundStyle:
+  text: "HP"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+hButtonUppercasedStateForegroundStyle:
+  text: "H"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+hButtonUpForegroundStyle:
+  text: "!"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+hButtonDownForegroundStyle:
+  text: "1"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+hButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: hButtonHintForegroundStyle
+  swipeUpForegroundStyle: hButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: hButtonSwipeDownHintForegroundStyle
+hButtonHintForegroundStyle:
+  text: "H"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+hButtonSwipeUpHintForegroundStyle:
+  text: "!"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+hButtonSwipeDownHintForegroundStyle:
+  text: "1"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+hButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - hButtonForegroundStyle1
+  - hButtonForegroundStyle2
+  - hButtonForegroundStyle3
+  - hButtonForegroundStyle4
+  actions:
+  - character: "h"
+  - character: "p"
+  - character: "a"
+  - symbol: "\u278A"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+hButtonForegroundStyle1:
+  text: "h"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+hButtonForegroundStyle2:
+  text: "p"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+hButtonForegroundStyle3:
+  text: "a"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+hButtonForegroundStyle4:
+  text: "\u278A"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+jButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - jButtonForegroundStyle
+  - jButtonUpForegroundStyle
+  - jButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - jButtonUppercasedStateForegroundStyle
+  - jButtonUpForegroundStyle
+  - jButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - jButtonUppercasedStateForegroundStyle
+  - jButtonUpForegroundStyle
+  - jButtonDownForegroundStyle
+  hintStyle: jButtonHintStyle
+  action:
+    character: "j"
+  uppercasedStateAction:
+    character: "J"
+  swipeUpAction:
+    character: "-"
+  swipeDownAction:
+    character: "0"
+  holdSymbolsStyle: jButtonHoldSymbolsStyle
+jButtonForegroundStyle:
+  text: "JK"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+jButtonUppercasedStateForegroundStyle:
+  text: "J"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+jButtonUpForegroundStyle:
+  text: "-"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+jButtonDownForegroundStyle:
+  text: "0"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+jButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: jButtonHintForegroundStyle
+  swipeUpForegroundStyle: jButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: jButtonSwipeDownHintForegroundStyle
+jButtonHintForegroundStyle:
+  text: "J"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+jButtonSwipeUpHintForegroundStyle:
+  text: "-"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+jButtonSwipeDownHintForegroundStyle:
+  text: "0"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+jButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - jButtonForegroundStyle1
+  - jButtonForegroundStyle2
+  - jButtonForegroundStyle3
+  - jButtonForegroundStyle4
+  actions:
+  - character: "j"
+  - character: "k"
+  - character: "i"
+  - symbol: "\U0001F10C"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+jButtonForegroundStyle1:
+  text: "j"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+jButtonForegroundStyle2:
+  text: "k"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+jButtonForegroundStyle3:
+  text: "i"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+jButtonForegroundStyle4:
+  text: "\U0001F10C"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+kButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - kButtonForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - kButtonUppercasedStateForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - kButtonUppercasedStateForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  hintStyle: kButtonHintStyle
+  action:
+    character: k
+  uppercasedStateAction:
+    character: K
+  swipeUpAction:
+    character: ':'
+  holdSymbolsStyle: kButtonHoldSymbolsStyle
+  swipeDownAction:
+    character: ;
+kButtonForegroundStyle:
+  text: "k"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+kButtonUppercasedStateForegroundStyle:
+  text: "K"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+kButtonUpForegroundStyle:
+  text: ':'
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+kButtonDownForegroundStyle:
+  text: ;
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+kButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: kButtonHintForegroundStyle
+  swipeUpForegroundStyle: kButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: kButtonSwipeDownHintForegroundStyle
+kButtonHintForegroundStyle:
+  text: K
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+kButtonSwipeUpHintForegroundStyle:
+  text: ':'
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+kButtonSwipeDownHintForegroundStyle:
+  text: ;
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+kButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - kButtonForegroundStyle1
+  - kButtonForegroundStyle2
+  actions:
+  - character: k
+  - character: K
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+kButtonForegroundStyle1:
+  text: k
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+kButtonForegroundStyle2:
+  text: K
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+lButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - lButtonForegroundStyle
+  - lButtonUpForegroundStyle
+  - lButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - lButtonUppercasedStateForegroundStyle
+  - lButtonUpForegroundStyle
+  - lButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - lButtonUppercasedStateForegroundStyle
+  - lButtonUpForegroundStyle
+  - lButtonDownForegroundStyle
+  hintStyle: lButtonHintStyle
+  action:
+    character: "l"
+  uppercasedStateAction:
+    character: "L"
+  swipeUpAction:
+    character: "&"
+  swipeDownAction:
+    character: "6"
+  holdSymbolsStyle: lButtonHoldSymbolsStyle
+lButtonForegroundStyle:
+  text: "L"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+lButtonUppercasedStateForegroundStyle:
+  text: "L"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+lButtonUpForegroundStyle:
+  text: "&"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+lButtonDownForegroundStyle:
+  text: "6"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+lButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: lButtonHintForegroundStyle
+  swipeUpForegroundStyle: lButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: lButtonSwipeDownHintForegroundStyle
+lButtonHintForegroundStyle:
+  text: "L"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+lButtonSwipeUpHintForegroundStyle:
+  text: "&"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+lButtonSwipeDownHintForegroundStyle:
+  text: "6"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+lButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - lButtonForegroundStyle1
+  - lButtonForegroundStyle2
+  - lButtonForegroundStyle3
+  actions:
+  - character: "l"
+  - symbol: "\u278F"
+  - keyboardType: "lefthand"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+lButtonForegroundStyle1:
+  text: "l"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+lButtonForegroundStyle2:
+  text: "\u278F"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+lButtonForegroundStyle3:
+  text: "\u5DE6\u624B"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+shiftButton:
+  size:
+    width: 168.75/1125
+  bounds:
+    width: 151/168.75
+    alignment: left
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: shiftButtonForegroundStyle
+  uppercasedStateForegroundStyle: shiftButtonUppercasedForegroundStyle
+  capsLockedStateForegroundStyle: shiftButtonCapsLockedForegroundStyle
+  preeditStateForegroundStyle: shiftpreeditStateForegroundStyle
+  preeditStateAction:
+    character: "/"
+  action: shift
+  swipeDownAction:
+    sendKeys: "Break"
+  swipeUpAction:
+    character: "'"
+  swipeRightAction: tab
+shiftpreeditStateForegroundStyle-old:
+  text: "'\u8BCD"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.75
+shiftpreeditStateForegroundStyle:
+  systemImageName: "paragraphsign"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+shiftButtonForegroundStyle:
+  systemImageName: "shift"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+shiftButtonUppercasedForegroundStyle:
+  systemImageName: "shift.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+shiftButtonCapsLockedForegroundStyle:
+  systemImageName: "capslock.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+zButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - zButtonForegroundStyle
+  - zButtonUpForegroundStyle
+  - zButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - zButtonUppercasedStateForegroundStyle
+  - zButtonUpForegroundStyle
+  - zButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - zButtonUppercasedStateForegroundStyle
+  - zButtonUpForegroundStyle
+  - zButtonDownForegroundStyle
+  hintStyle: zButtonHintStyle
+  action:
+    character: "z"
+  uppercasedStateAction:
+    character: "Z"
+  swipeUpAction:
+    character: "#"
+  swipeDownAction:
+    character: "3"
+  holdSymbolsStyle: zButtonHoldSymbolsStyle
+zButtonForegroundStyle:
+  text: "Zh"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+zButtonUppercasedStateForegroundStyle:
+  text: "Z"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+zButtonUpForegroundStyle:
+  text: "#"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+zButtonDownForegroundStyle:
+  text: "3"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+zButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: zButtonHintForegroundStyle
+  swipeUpForegroundStyle: zButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: zButtonSwipeDownHintForegroundStyle
+zButtonHintForegroundStyle:
+  text: "Z"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+zButtonSwipeUpHintForegroundStyle:
+  text: "#"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+zButtonSwipeDownHintForegroundStyle:
+  text: "3"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+zButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - zButtonForegroundStyle1
+  - zButtonForegroundStyle2
+  actions:
+  - character: "z"
+  - symbol: "\u278C"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+zButtonForegroundStyle1:
+  text: "z"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+zButtonForegroundStyle2:
+  text: "\u278C"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+xButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - xButtonForegroundStyle
+  - xButtonUpForegroundStyle
+  - xButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - xButtonUppercasedStateForegroundStyle
+  - xButtonUpForegroundStyle
+  - xButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - xButtonUppercasedStateForegroundStyle
+  - xButtonUpForegroundStyle
+  - xButtonDownForegroundStyle
+  hintStyle: xButtonHintStyle
+  action:
+    character: "x"
+  uppercasedStateAction:
+    character: "X"
+  swipeUpAction:
+    character: "%"
+  swipeDownAction:
+    character: "5"
+  holdSymbolsStyle: xButtonHoldSymbolsStyle
+xButtonForegroundStyle:
+  text: "oXv"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+xButtonUppercasedStateForegroundStyle:
+  text: "X"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+xButtonUpForegroundStyle:
+  text: "%"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+xButtonDownForegroundStyle:
+  text: "5"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+xButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: xButtonHintForegroundStyle
+  swipeUpForegroundStyle: xButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: xButtonSwipeDownHintForegroundStyle
+xButtonHintForegroundStyle:
+  text: "X"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+xButtonSwipeUpHintForegroundStyle:
+  text: "%"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+xButtonSwipeDownHintForegroundStyle:
+  text: "5"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+xButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - xButtonForegroundStyle1
+  - xButtonForegroundStyle2
+  - xButtonForegroundStyle3
+  - xButtonForegroundStyle4
+  actions:
+  - character: "o"
+  - character: "x"
+  - character: "v"
+  - symbol: "\u278E"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+xButtonForegroundStyle1:
+  text: "o"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+xButtonForegroundStyle2:
+  text: "x"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+xButtonForegroundStyle3:
+  text: "v"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+xButtonForegroundStyle4:
+  text: "\u278E"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - cButtonForegroundStyle
+  - cButtonUpForegroundStyle
+  - cButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - cButtonUppercasedStateForegroundStyle
+  - cButtonUpForegroundStyle
+  - cButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - cButtonUppercasedStateForegroundStyle
+  - cButtonUpForegroundStyle
+  - cButtonDownForegroundStyle
+  hintStyle: cButtonHintStyle
+  action:
+    character: "c"
+  uppercasedStateAction:
+    character: "C"
+  swipeUpAction:
+    shortcutCommand: "#selectText"
+  swipeDownAction:
+    shortcutCommand: "#\u64A4\u9500"
+  holdSymbolsStyle: cButtonHoldSymbolsStyle
+cButtonForegroundStyle:
+  text: "Ch"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+cButtonUppercasedStateForegroundStyle:
+  text: "C"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+cButtonUpForegroundStyle:
+  text: "\u5168\u9009"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+cButtonDownForegroundStyle:
+  text: "\u64A4\u9500"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+cButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: cButtonHintForegroundStyle
+  swipeUpForegroundStyle: cButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: cButtonSwipeDownHintForegroundStyle
+cButtonHintForegroundStyle:
+  text: "C"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+cButtonSwipeUpHintForegroundStyle:
+  text: "\u5168\u9009"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+cButtonSwipeDownHintForegroundStyle:
+  text: "\u64A4\u9500"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+cButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - cButtonForegroundStyle1
+  actions:
+  - character: "c"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+cButtonForegroundStyle1:
+  text: "c"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+vButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - vButtonForegroundStyle
+  - vButtonUpForegroundStyle
+  - vButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - vButtonUppercasedStateForegroundStyle
+  - vButtonUpForegroundStyle
+  - vButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - vButtonUppercasedStateForegroundStyle
+  - vButtonUpForegroundStyle
+  - vButtonDownForegroundStyle
+  hintStyle: vButtonHintStyle
+  holdSymbolsStyle: vButtonHoldSymbolsStyle
+  action:
+    character: v
+  uppercasedStateAction:
+    character: V
+  swipeUpAction:
+    character: <
+  swipeDownAction:
+    sendKeys: ors
+vButtonForegroundStyle:
+  text: "v"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+vButtonUppercasedStateForegroundStyle:
+  text: "V"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+vButtonUpForegroundStyle:
+  text: "\u300A"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+vButtonDownForegroundStyle:
+  systemImageName: calendar.badge.clock
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.25
+vButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: vButtonHintForegroundStyle
+  swipeUpForegroundStyle: vButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: vButtonSwipeDownHintForegroundStyle
+vButtonHintForegroundStyle:
+  text: V
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+vButtonSwipeUpHintForegroundStyle:
+  text: "\u300A"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+vButtonSwipeDownHintForegroundStyle:
+  systemImageName: calendar.badge.clock
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.25
+vButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - vButtonForegroundStyle1
+  - vButtonForegroundStyle2
+  actions:
+  - character: v
+  - character: V
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+vButtonForegroundStyle1:
+  text: v
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+vButtonForegroundStyle2:
+  text: V
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+bButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - bButtonForegroundStyle
+  - bButtonUpForegroundStyle
+  - bButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - bButtonUppercasedStateForegroundStyle
+  - bButtonUpForegroundStyle
+  - bButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - bButtonUppercasedStateForegroundStyle
+  - bButtonUpForegroundStyle
+  - bButtonDownForegroundStyle
+  hintStyle: bButtonHintStyle
+  action:
+    character: "b"
+  uppercasedStateAction:
+    character: "B"
+  swipeUpAction:
+    character: "$"
+  swipeDownAction:
+    character: "4"
+  holdSymbolsStyle: bButtonHoldSymbolsStyle
+bButtonForegroundStyle:
+  text: "B"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+bButtonUppercasedStateForegroundStyle:
+  text: "B"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+bButtonUpForegroundStyle:
+  text: "$"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+bButtonDownForegroundStyle:
+  text: "4"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+bButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: bButtonHintForegroundStyle
+  swipeUpForegroundStyle: bButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: bButtonSwipeDownHintForegroundStyle
+bButtonHintForegroundStyle:
+  text: "B"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+bButtonSwipeUpHintForegroundStyle:
+  text: "$"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+bButtonSwipeDownHintForegroundStyle:
+  text: "4"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+bButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - bButtonForegroundStyle1
+  - bButtonForegroundStyle2
+  actions:
+  - character: "b"
+  - symbol: "\u278D"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+bButtonForegroundStyle1:
+  text: "b"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+bButtonForegroundStyle2:
+  text: "\u278D"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+nButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - nButtonForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - nButtonUppercasedStateForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - nButtonUppercasedStateForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  hintStyle: nButtonHintStyle
+  hintStyle: nButtonHintStyle
+  action:
+    character: "n"
+  uppercasedStateAction:
+    character: "N"
+  swipeUpAction:
+    character: ":"
+  swipeDownAction:
+    character: ";"
+  holdSymbolsStyle: nButtonHoldSymbolsStyle
+nButtonForegroundStyle:
+  text: "NR"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+nButtonUppercasedStateForegroundStyle:
+  text: "N"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+nButtonUpForegroundStyle:
+  text: ":"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+nButtonDownForegroundStyle:
+  text: ";"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+nButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: nButtonHintForegroundStyle
+  swipeUpForegroundStyle: nButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: nButtonSwipeDownHintForegroundStyle
+nButtonHintForegroundStyle:
+  text: "N"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+nButtonSwipeUpHintForegroundStyle:
+  text: ":"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+nButtonSwipeDownHintForegroundStyle:
+  text: ";"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+nButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - nButtonForegroundStyle1
+  - nButtonForegroundStyle2
+  - nButtonForegroundStyle3
+  actions:
+  - character: "n"
+  - character: "r"
+  - keyboardType: "righthand"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+nButtonForegroundStyle1:
+  text: "n"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+nButtonForegroundStyle2:
+  text: "r"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+nButtonForegroundStyle3:
+  text: "\u53F3\u624B"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+mButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - mButtonForegroundStyle
+  - mButtonUpForegroundStyle
+  - mButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - mButtonUppercasedStateForegroundStyle
+  - mButtonUpForegroundStyle
+  - mButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - mButtonUppercasedStateForegroundStyle
+  - mButtonUpForegroundStyle
+  - mButtonDownForegroundStyle
+  hintStyle: mButtonHintStyle
+  action:
+    character: "m"
+  uppercasedStateAction:
+    character: "M"
+  swipeUpAction:
+    character: "^"
+  swipeDownAction:
+    character: "`"
+  holdSymbolsStyle: mButtonHoldSymbolsStyle
+mButtonForegroundStyle:
+  text: "MS"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    x: 0.5
+    y: 0.8
+mButtonUppercasedStateForegroundStyle:
+  text: "M"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.85
+mButtonUpForegroundStyle:
+  text: "^"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+mButtonDownForegroundStyle:
+  text: "`"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.75
+    y: 0.65
+mButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: mButtonHintForegroundStyle
+  swipeUpForegroundStyle: mButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: mButtonSwipeDownHintForegroundStyle
+mButtonHintForegroundStyle:
+  text: "M"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+mButtonSwipeUpHintForegroundStyle:
+  text: "^"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+mButtonSwipeDownHintForegroundStyle:
+  text: "`"
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+mButtonHoldSymbolsStyle:
+  insets:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - mButtonForegroundStyle1
+  actions:
+  - character: "m"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+mButtonForegroundStyle1:
+  text: "m"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+backspaceButton:
+  size:
+    width: 1/6
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle:
+  - backspaceButtonForegroundStyle
+  action: backspace
+  repeatAction: backspace
+  swipeLeftAction:
+    shortcutCommand: "#\u91CD\u8F93"
+  swipeUpAction:
+    shortcutCommand: "#deleteText"
+backspaceButtonForegroundStyle:
+  systemImageName: "delete.left"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+123Button:
+  size:
+    width:
+      percentage: 0.12
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: 123ButtonForegroundStyle
+  action:
+    keyboardType: numeric
+  swipeUpAction:
+    shortcutCommand: "#RimeSwitcher"
+  swipeRightAction:
+    shortcutCommand: "#\u65B9\u6848\u5207\u6362"
+  holdSymbolsStyle: 123ButtonHoldSymbolsStyle
+123ButtonForegroundStyle:
+  text: "123"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+123ButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - 123ButtonForegroundStyle1
+  - 123ButtonForegroundStyle2
+  - 123ButtonForegroundStyle3
+  - 123ButtonForegroundStyle4
+  actions:
+  - keyboardType: emoji
+  - keyboardType: symbolic
+  - shortcutCommand: '#RimeSwitcher'
+  - shortcutCommand: "#\u65B9\u6848\u5207\u6362"
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+123ButtonForegroundStyle1:
+  systemImageName: face.dashed.fill
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+123ButtonForegroundStyle2:
+  systemImageName: ellipsis.curlybraces
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+123ButtonForegroundStyle3:
+  systemImageName: timeline.selection
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+123ButtonForegroundStyle4:
+  systemImageName: filemenu.and.selection
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cnenButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle:
+  - cnenButtonForegroundStyle
+  action:
+    keyboardType: alphabetic
+  holdSymbolsStyle: cnenButtonHoldSymbolsStyle
+cnenButtonForegroundStyle:
+  assetImageName: chineseState
+  center:
+    y: 0.5
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+cnenButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - cnenButtonForegroundStyle1
+  - cnenButtonForegroundStyle2
+  - cnenButtonForegroundStyle3
+  - cnenButtonForegroundStyle4
+  - cnenButtonForegroundStyle5
+  actions:
+  - sendKeys: Control+Shift+t
+  - sendKeys: Control+Shift+f
+  - sendKeys: Control+Shift+m
+  - sendKeys: Control+Shift+s
+  - sendKeys: Control+Shift+p
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+cnenButtonForegroundStyle1:
+  text: "// JavaScript\nfunction getText() {\n  if ($getRimeOptionState(\"s2s\"))
+    {\n      return \"\u7B80\";\n  } else if ($getRimeOptionState(\"s2t\")) {\n      return
+    \"\u7E41\";\n  } else if ($getRimeOptionState(\"s2hk\")) {\n      return \"\u6E2F\";\n
+    \ } else if ($getRimeOptionState(\"s2tw\")) {\n      return \"\u53F0\";\n  } else
+    {\n      return \"\u7B80\";\n  }\n}"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cnenButtonForegroundStyle2:
+  text: "// JavaScript\nfunction getText() {\n  return $getRimeOptionState(\"chinese_english\")
+    ? \"\u7FFB\" : \"\u8BD1\";\n}"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cnenButtonForegroundStyle3:
+  text: "// JavaScript\nfunction getText() {\n  return $getRimeOptionState(\"chaifen_switch\")
+    ? \"\u62C6\" : \"\u5173\";\n}"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cnenButtonForegroundStyle4:
+  text: "// JavaScript\nfunction getText() {\n  return $getRimeOptionState(\"super_tips\")
+    ? \"\u63D0\" : \"\u5173\";\n}"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+cnenButtonForegroundStyle5:
+  text: "// JavaScript\nfunction getText() {\n  return $getRimeOptionState(\"prediction\")
+    ? \"\u9884\" : \"\u6D4B\";\n}"
+  fontSize: 1.75em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+commaButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - commaButtonPinyinForegroundStyle
+  - commaButtonUpForegroundStyle
+  action:
+    character: ","
+  swipeUpAction:
+    symbol: ","
+  repeatAction:
+    character: ","
+commaButtonUpForegroundStyle:
+  text: ","
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+commaButtonPinyinForegroundStyle:
+  text: "\uFF0C"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+commaButtonEnForegroundStyle:
+  text: ","
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+spaceButton:
+  size:
+    width:
+      percentage: 0.36
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle: spaceButtonPinyinForegroundStyle
+  preeditStateForegroundStyle: spacepreeditStateForegroundStyle
+  action: space
+  swipeUpAction:
+    shortcutCommand: "#\u6B21\u9009\u4E0A\u5C4F"
+  swipeDownAction:
+    shortcutCommand: "#\u4E09\u9009\u4E0A\u5C4F"
+  swipeLeftAction:
+    sendKeys: Left
+  swipeRightAction:
+    sendKeys: Right
+spaceButtonPinyinForegroundStyle:
+  systemImageName: "space"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.6
+spacepreeditStateForegroundStyle:
+  text: "// JavaScript\nfunction getText() {\n  const candidate = $getRimeCandidates();\n
+    \ \n  // \u5224\u65AD candidate \u662F\u5426\u5B58\u5728\n  if (candidate && candidate.length
+    > 0) {\n    const result = candidate.map(c => c.text).join(\" \");\n    if (result.length
+    > 11) {\n      return result.slice(0,8) + \"...\";\n    }\n    return result;\n
+    \ }\n  return \"\";\n}"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+dotButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - dotButtonPinyinForegroundStyle
+  - dotButtonUpForegroundStyle
+  action:
+    character: "."
+  swipeUpAction:
+    symbol: "."
+  repeatAction:
+    character: "."
+dotButtonUpForegroundStyle:
+  text: .
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  center:
+    x: 0.25
+    y: 0.65
+dotButtonPinyinForegroundStyle:
+  text: "\u3002"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+dotButtonEnForegroundStyle:
+  text: "."
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+enterButton:
+  size:
+    width:
+      percentage: 0.22
+  backgroundStyle: |-
+    // JavaScript
+    function getText() {
+      let type = $getReturnKeyType();
+      if (type === 1 || type === 4 || type === 7) {
+        return "blueSystemButtonBackgroundStyle";
+      }
+      return "systemButtonBackgroundStyle";
+    }
+  foregroundStyle: |-
+    // JavaScript
+    function getText() {
+      let type = $getReturnKeyType();
+      if (type === 1 || type === 4 || type === 7) {
+        return "enterButtonWhiteForegroundStyle";
+      }
+      return "enterButtonBlackForegroundStyle";
+    }
+  action: enter
+  swipeUpAction:
+    shortcutCommand: "#\u6362\u884C"
+enterButtonWhiteForegroundStyle:
+  text: "// JavaScript\nfunction getText() {\n  const type = $getReturnKeyType();\n
+    \ switch (type) {\n    case 1:\n      return \"\u524D\u5F80\";\n    case 3:\n
+    \     return \"\u52A0\u5165\";\n    case 4:\n      return \"\u524D\u5F80\";\n
+    \   case 6:\n      return \"\u641C\u7D22\"\n    case 7:\n      return \"\u53D1\u9001\"\n
+    \   case 9:\n      return \"\u5B8C\u6210\";\n    default:\n      return \"\u6362\u884C\";\n
+    \ }\n}"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+enterButtonBlackForegroundStyle:
+  text: "// JavaScript\nfunction getText() {\n  const type = $getReturnKeyType();\n
+    \ switch (type) {\n    case 1:\n      return \"\u524D\u5F80\";\n    case 3:\n
+    \     return \"\u52A0\u5165\";\n    case 4:\n      return \"\u524D\u5F80\";\n
+    \   case 6:\n      return \"\u641C\u7D22\"\n    case 7:\n      return \"\u53D1\u9001\"\n
+    \   case 9:\n      return \"\u5B8C\u6210\";\n    default:\n      return \"\u6362\u884C\";\n
+    \ }\n}"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8

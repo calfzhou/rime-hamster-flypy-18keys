@@ -1,0 +1,3235 @@
+### 通用样式声明 begin ###
+
+# 字母按键背景样式
+alphabeticButtonBackgroundStyle:
+  type: original
+  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  normalColor: BBBBBB66
+  highlightColor: BBBBBB66
+  cornerRadius: 7
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF1A
+  highlightBorderColor: FFFFFF1A
+  animation: alphabeticBackgroundAnimation
+
+# 字母键前景通用属性
+alphabeticButtonForegroundStyle: &alphabeticButtonForegroundStyle
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  #  fontWeight: regular
+  center:
+    x: 0.5
+    y: 0.8
+
+# 自定义功能按键前景通用属性
+alphabeticCustomButtonForegroundStyle: &alphabeticCustomButtonForegroundStyle
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.125em
+  #  fontWeight: regular
+  center:
+    x: 0.5
+    y: 0.5
+
+# 大写状态下字母键前景通用属性
+alphabeticButtonUppercasedStateForegroundStyle: &alphabeticButtonUppercasedStateForegroundStyle
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  #  fontWeight: regular
+  center:
+    y: 0.85
+
+# 字母键上划角标前景通用属性
+alphabeticSwipeUpBadgeStyle: &alphabeticSwipeUpBadgeStyle
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  #  fontWeight: regular
+  center:
+    x: 0.25
+    y: 0.65
+
+# 字母键下划角标前景通用属性
+alphabeticSwipeDownBadgeStyle: &alphabeticSwipeDownBadgeStyle
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  #  fontWeight: regular
+  center:
+    x: 0.75
+    y: 0.65
+
+
+# 字母键 hint 气泡前景通用属性
+alphabeticHintStyle: &alphabeticHintStyle
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.55
+
+# 字母键下划角标sf symbol前景通用属性
+sfsymbolSwipeDownBadgeStyle: &sfsymbolSwipeDownBadgeStyle
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 0.625em
+  #  fontWeight: regular
+  center:
+    x: 0.75
+    y: 0.25
+
+# sf symbol的 hint 气泡前景通用属性
+sfsymbolHintStyle: &sfsymbolHintStyle
+  fontSize: 1.875em
+  normalColor: E5E5EA
+  center:
+    y: 0.25
+
+# 字母键长按前景通用属性
+alphabeticHoldSymbolStyle: &alphabeticHoldSymbolStyle
+  fontSize: 1.125em
+  normalColor: E5E5EA
+  highlightColor: ffffff
+  center:
+    y: 0.5
+
+# 字母按键 hint 气泡背景样式
+alphabeticHintBackgroundStyle:
+  type: original
+  normalColor: 707070
+  borderColor: 6E6E6E
+  borderSize: 1
+  topCornerRadius: 10
+  bottomCornerRadius: 5
+  # shadowColor: 797B7E
+  # shadowOffset: { x: 0, y: 5 }
+
+# 字母按键长按背景样式
+alphabeticHoldSymbolsBackgroundStyle:
+  type: original
+  normalColor: 707070
+  borderColor: 6E6E6E
+  borderSize: 1
+  topCornerRadius: 10
+  bottomCornerRadius: 5
+
+# 字母按键长按选中状态背景样式
+alphabeticHoldSymbolsSelectedStyle:
+  type: original
+  normalColor: 0279FE
+  cornerRadius: 5
+
+# 功能按键背景样式
+systemButtonBackgroundStyle: &systemButtonBackgroundStyle
+  type: original
+  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  normalColor: '55555580'
+  highlightColor: BBBBBB80
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF14
+  highlightBorderColor: FFFFFF14
+  animation: alphabeticBackgroundAnimation
+
+# 蓝色功能按键背景样式
+blueSystemButtonBackgroundStyle:
+  type: original
+  insets: {top: 5, left: 3, bottom: 5, right: 3}
+  normalColor: 0279FE
+  highlightColor: BBBBBB66
+  cornerRadius: 5
+  normalLowerEdgeColor: 00000099
+  highlightLowerEdgeColor: 00000099
+  borderSize: 0.2
+  normalBorderColor: FFFFFF14
+  highlightBorderColor: FFFFFF14
+  animation: alphabeticBackgroundAnimation
+
+# 功能键前景通用属性
+systemButtonForegroundStyle: &systemButtonForegroundStyle
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  #  fontWeight: regular
+  center:
+    y: 0.8
+
+# 键盘背景通用属性
+backgroundOriginalStyle: &backgroundOriginalStyle
+  type: original
+  normalColor: 2C2C2C03 # 2C2C2C00
+
+# 字母按键背景动画
+alphabeticBackgroundAnimation:
+  # type: 动画类型
+  # - bounds: 尺寸大小变化动画
+- type: bounds
+  duration: 80   # 动画时长，单位毫秒
+  repeatCount: 1
+  fromScale: 1
+  toScale: 0.8
+- type: bounds
+  duration: 80
+  repeatCount: 1
+  fromScale: 0.8
+  toScale: 1
+
+
+### 通用样式声明 end ###
+
+### 键盘定义 ###
+
+preeditHeight: 20 # 25
+
+toolbarHeight: 40 # 35
+
+keyboardHeight: 216  
+
+preedit:
+  insets: {left: 4, top: 2}
+  backgroundStyle: preeditBackgroundStyle
+  foregroundStyle: preeditForegroundStyle
+
+preeditBackgroundStyle:
+  <<: *backgroundOriginalStyle
+
+preeditForegroundStyle:
+  textColor: ffffff
+  fontSize: 0.88em
+#  fontWeight: regular
+
+toolbar:
+  backgroundStyle: toolbarBackgroundStyle
+  primaryButtonStyle: primaryButtonStyle
+  secondaryButtonStyle:
+  - toolbarButton1Style
+  - toolbarButton7Style
+#  - toolbarButton6Style
+#  - toolbarButton2Style
+#  - toolbarButton3Style
+  - toolbarButton4Style
+  - toolbarButton5Style
+
+  horizontalCandidateStyle: horizontalCandidateStyle
+  verticalCandidateStyle: verticalCandidateStyle
+  candidateContextMenu: candidateContextMenuStyle
+
+
+candidateContextMenuStyle: #candidateContextMenu有两个属性：name、action
+- name: "左移"
+  action: {sendKeys: "Control+j"}
+- name: "右移"
+  action: {sendKeys: "Control+k"}
+- name: "重置"
+  action: {sendKeys: "Control+l"}
+- name: "置顶"
+  action: {sendKeys: "Control+p"}
+
+
+toolbarBackgroundStyle:
+  <<: *backgroundOriginalStyle
+
+primaryButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: primaryButtonForegroundStyle
+  action: {floatKeyboardType: float_app}
+
+primaryButtonForegroundStyle:
+  systemImageName: "bubbles.and.sparkles.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButtonBackgroundStyle:
+  normalColor: 00000000
+  highlightColor: 00000000
+
+toolbarButton1Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton1ForegroundStyle
+  action: dismissKeyboard
+
+toolbarButton1ForegroundStyle:
+  systemImageName: "keyboard.chevron.compact.down.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButton2Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton2ForegroundStyle
+  action: {keyboardType: alphabetic}
+
+toolbarButton2ForegroundStyle:
+  assetImageName: chineseState
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+#  fontWeight: regular
+
+# toolbarButton2Style:
+#   backgroundStyle: toolbarButtonBackgroundStyle
+#   foregroundStyle: toolbarButton2ForegroundStyle
+#   action: { shortcutCommand: "#中英切换" }
+# 
+# toolbarButton2ForegroundStyle:
+#   text: |-
+#     // JavaScript
+#     function getText() {
+#       return $getRimeOptionState("ascii_mode") ? "英" : "中";
+#     }
+#   normalColor: E5E5EA
+#   highlightColor: E5E5EA
+#   fontSize: 1em
+#  fontWeight: regular
+
+toolbarButton3Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton3ForegroundStyle
+  action: {shortcutCommand: "#toggleScriptView"}
+
+toolbarButton3ForegroundStyle:
+  systemImageName: "atom"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButton4Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton4ForegroundStyle
+  action: {shortcutCommand: "#showPasteboardView"}
+
+toolbarButton4ForegroundStyle:
+  systemImageName: "list.bullet.clipboard"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButton5Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton5ForegroundStyle
+  action: {shortcutCommand: "#showPhraseView"}
+
+toolbarButton5ForegroundStyle:
+  systemImageName: "note.text"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButton6Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton6ForegroundStyle
+  action: {keyboardType: emoji}
+
+toolbarButton6ForegroundStyle:
+  systemImageName: "face.dashed.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+toolbarButton7Style:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: toolbarButton7ForegroundStyle
+  action: {floatKeyboardType: float_panel}
+
+toolbarButton7ForegroundStyle:
+  systemImageName: "gearshape.fill"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+
+horizontalCandidateStyle:
+  insets: {left: 3, bottom: 1, top: 3}
+  candidateStateButtonStyle: candidateStateButtonStyle
+  highlightBackgroundColor: 00000033
+  preferredBackgroundColor: 00000033
+  preferredIndexColor: ffffff
+  preferredTextColor: ffffff
+  preferredCommentColor: ffffff
+  indexColor: ffffff
+  textColor: ffffff
+  commentColor: ffffff
+  indexFontSize: 1.19em
+  #  indexFontWeight: regular
+  textFontSize: 1.19em
+  #  textFontWeight: regular
+  commentFontSize: 0.5em
+  #  commentFontWeight: regular
+
+candidateStateButtonStyle:
+  backgroundStyle: toolbarButtonBackgroundStyle
+  foregroundStyle: candidateStateButtonForegroundStyle
+
+candidateStateButtonForegroundStyle:
+  systemImageName: "chevron.down"
+  normalColor: E5E5EA
+  highlightColor: E5E5EA
+  fontSize: 1.125em
+
+verticalCandidateStyle:
+  insets: {top: 3, bottom: 3, left: 4, right: 4}
+  bottomRowHeight: 50
+  backgroundStyle: verticalCandidateBackgroundStyle
+  candidateStyle: verticalCandidateOfCandidateStyle
+  pageUpButtonStyle: verticalCandidatePageUpButtonStyle
+  pageDownButtonStyle: verticalCandidatePageDownButtonStyle
+  returnButtonStyle: verticalCandidateReturnButtonStyle
+  backspaceButtonStyle: verticalCandidateBackspaceButtonStyle
+
+verticalCandidateBackgroundStyle:
+  <<: *backgroundOriginalStyle
+
+verticalCandidateOfCandidateStyle:
+  insets: {top: 8, bottom: 8, left: 8, right: 8}
+  backgroundColor: ffffff00
+  separatorColor: 383838
+  highlightBackgroundColor: 00000000
+  preferredBackgroundColor: 00000000
+  preferredIndexColor: 1a73e9
+  preferredTextColor: 1a73e9
+  preferredCommentColor: 1a73e9
+  indexColor: ffffff
+  textColor: ffffff
+  commentColor: ffffff
+  indexFontSize: 8
+  #  indexFontWeight: regular
+  textFontSize: 18
+  #  textFontWeight: regular
+  commentFontSize: 8
+  #  commentFontWeight: regular
+
+verticalCandidatePageUpButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageUpButtonForegroundStyle
+
+verticalCandidateButtonBackgroundStyle:
+  <<: *systemButtonBackgroundStyle
+
+verticalCandidatePageUpButtonForegroundStyle:
+  systemImageName: "chevron.up"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+
+verticalCandidatePageDownButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidatePageDownButtonForegroundStyle
+
+verticalCandidatePageDownButtonForegroundStyle:
+  systemImageName: "chevron.down"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+
+verticalCandidateReturnButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle: verticalCandidateReturnButtonForegroundStyle
+
+verticalCandidateReturnButtonForegroundStyle:
+  systemImageName: "return"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+
+verticalCandidateBackspaceButtonStyle:
+  backgroundStyle: verticalCandidateButtonBackgroundStyle
+  foregroundStyle:
+  - verticalCandidateBackspaceButtonForegroundStyle
+
+verticalCandidateBackspaceButtonForegroundStyle:
+  systemImageName: "delete.left"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+
+# 键盘
+keyboardLayout:
+  - HStack:
+      subviews:
+        - Cell: qButton
+        - Cell: wButton
+        - Cell: rButton
+        - Cell: yButton
+        - Cell: uButton
+        - Cell: iButton
+        - Cell: pButton
+  - HStack:
+      subviews:
+        - Cell: aButton
+        - Cell: sButton
+        - Cell: fButton
+        - Cell: hButton
+        - Cell: jButton
+        - Cell: lButton
+  - HStack:
+      subviews:
+        - Cell: shiftButton
+        - Cell: zButton
+        - Cell: xButton
+        - Cell: vButton
+        - Cell: bButton
+        - Cell: mButton
+        - Cell: backspaceButton
+  - HStack:
+      subviews:
+        - Cell: 123Button
+        - Cell: cnenButton
+        - Cell: commaButton
+        - Cell: spaceButton
+        - Cell: dotButton
+        - Cell: enterButton
+
+
+keyboardStyle:
+  backgroundStyle: keyboardBackgroundStyle
+
+keyboardBackgroundStyle:
+  <<: *backgroundOriginalStyle
+
+symbolcollection:
+  backgroundStyle: systemButtonBackgroundStyle
+  type: symbols
+  dataSource: symbols
+  cellStyle: collectionCellStyle
+
+dataSource:
+  symbols:
+  - "?"
+  - "!"
+  - "@"
+  - ":"
+  - ";"
+  - "()"
+  - "#"
+  - "="
+  - "+"
+  - "-"
+  - "*"
+  - "/"
+
+collectionCellStyle:
+  foregroundStyle: systemButtonForegroundStyle
+
+
+
+leftButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - leftButtonForegroundStyle
+  preeditStateForegroundStyle: leftpreeditStateForegroundStyle
+  action: {shortcutCommand: "#左移"}
+  swipeUpAction: {shortcutCommand: "#行首"}
+  swipeDownAction: {character: "["}
+  preeditStateAction: {sendKeys: "Up"}
+  repeatAction: {shortcutCommand: "#左移"}
+  # holdSymbolsStyle: leftButtonHoldSymbolsStyle
+
+leftButtonForegroundStyle:
+  systemImageName: "arrowshape.turn.up.left.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+leftButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - leftButtonHoldSymbolsForegroundStyle
+  - leftButtonHoldSymbolsForegroundStyle2
+  preeditStateForegroundStyle: leftpreeditStateForegroundStyle
+  actions:
+  - {shortcutCommand: "#行首"}
+  - {character: "["}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+leftButtonHoldSymbolsForegroundStyle:
+  systemImageName: "arrowshape.left.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+leftButtonHoldSymbolsForegroundStyle2:
+  systemImageName: "square.filled.and.line.vertical.and.square"
+  <<: *alphabeticHoldSymbolStyle
+
+leftpreeditStateForegroundStyle:
+  systemImageName: "square.filled.and.line.vertical.and.square"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+
+
+atomButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - atomButtonForegroundStyle
+  preeditStateForegroundStyle: uppreeditStateForegroundStyle
+  action: {shortcutCommand: "#toggleScriptView"}
+  preeditStateAction: {sendKeys: "Control+Shift+Up"}
+  holdSymbolsStyle: atomButtonHoldSymbolsStyle
+
+uppreeditStateForegroundStyle:
+  systemImageName: "arrowtriangle.up.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+atomButtonForegroundStyle:
+  systemImageName: "atom"
+  <<: *alphabeticCustomButtonForegroundStyle
+atomButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - atomButtonForegroundStyle1
+  - atomButtonForegroundStyle2
+  - atomButtonForegroundStyle3
+  actions:
+  - {openURL: "https://www.google.com/search?q=#pasteboardContent"}
+  - {openURL: "#pasteboardContent"}
+  - {openURL: "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=#pasteboardContent"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+atomButtonForegroundStyle1:
+  systemImageName: "g.circle.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+atomButtonForegroundStyle2:
+  systemImageName: "safari.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+atomButtonForegroundStyle3:
+  systemImageName: "apple.logo"
+  <<: *alphabeticHoldSymbolStyle
+
+rimeButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rimeButtonForegroundStyle
+  preeditStateForegroundStyle: rimepreeditStateForegroundStyle
+  action: {runTranslateScript: Translator}
+  preeditStateAction: {character: "7"}
+  # holdSymbolsStyle: rimeButtonHoldSymbolsStyle
+
+rimeButtonForegroundStyle:
+  systemImageName: "bonjour"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+rimeButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rimeButtonHoldSymbolsOffirstForegroundStyle
+  - rimeButtonHoldSymbolsOfsecondForegroundStyle
+  - rimeButtonHoldSymbolsOfthirdForegroundStyle
+  actions:
+  - {openURL: "https://www.google.com/search?q=#pasteboardContent"}
+  - {openURL: "#pasteboardContent"}
+  - {openURL: "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=#pasteboardContent"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+rimeButtonHoldSymbolsOffirstForegroundStyle:
+  systemImageName: "g.circle.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+rimeButtonHoldSymbolsOfsecondForegroundStyle:
+  systemImageName: "safari.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+rimeButtonHoldSymbolsOfthirdForegroundStyle:
+  systemImageName: "apple.logo"
+  <<: *alphabeticHoldSymbolStyle
+
+rimepreeditStateForegroundStyle:
+  systemImageName: "arrow.right"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+
+cutButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - cutButtonForegroundStyle
+  preeditStateForegroundStyle: cutpreeditStateForegroundStyle
+  action: {shortcutCommand: "#剪切"}
+  preeditStateAction: {character: "8"}
+  holdSymbolsStyle: cutButtonHoldSymbolsStyle
+
+cutButtonForegroundStyle:
+  systemImageName: "scissors"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+cutButtonHoldSymbolsStyle:
+  actions: {openURL: "hamster://dev.fuxiao.app.hamster/clipboard"}
+
+cutpreeditStateForegroundStyle:
+  systemImageName: "arrow.up.right"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+copyButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - copyButtonForegroundStyle
+  preeditStateForegroundStyle: copypreeditStateForegroundStyle
+  action: {shortcutCommand: "#复制"}
+  preeditStateAction: {character: "9"}
+  holdSymbolsStyle: copyButtonHoldSymbolsStyle
+
+copyButtonForegroundStyle:
+  systemImageName: "arrow.up.doc.on.clipboard"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+copyButtonHoldSymbolsStyle:
+  actions: {openURL: "#showPhraseView"}
+
+
+copypreeditStateForegroundStyle:
+  systemImageName: "arrow.uturn.up"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+pasteButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - pasteButtonForegroundStyle
+  preeditStateForegroundStyle: pastepreeditStateForegroundStyle
+  action: {shortcutCommand: "#粘贴"}
+  preeditStateAction: {character: "0"}
+  holdSymbolsStyle: pasteButtonHoldSymbolsStyle
+
+pasteButtonForegroundStyle:
+  systemImageName: "doc.on.clipboard.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+pasteButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - pasteButtonForegroundStyle1
+  - pasteButtonForegroundStyle2
+  actions:
+  - shortcutCommand: '#showPhraseView'
+  - shortcutCommand: '#showPasteboardView'
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+pasteButtonForegroundStyle1:
+  systemImageName: note.text
+  <<: *alphabeticHoldSymbolStyle
+pasteButtonForegroundStyle2:
+  systemImageName: list.bullet.clipboard
+  <<: *alphabeticHoldSymbolStyle
+
+pastepreeditStateForegroundStyle:
+  systemImageName: "arrow.down.right"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+
+selectButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - selectButtonForegroundStyle
+  preeditStateForegroundStyle: downpreeditStateForegroundStyle
+  action: {shortcutCommand: "#selectText"}
+  preeditStateAction: {sendKeys: "Control+Shift+Down"}
+  holdSymbolsStyle: selectButtonHoldSymbolsStyle
+
+downpreeditStateForegroundStyle:
+  systemImageName: "arrowtriangle.down.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+selectButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - selectButtonForegroundStyle1
+  - selectButtonForegroundStyle2
+  actions:
+  - shortcutCommand: '#撤销'
+  - shortcutCommand: '#重做'
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+selectButtonForegroundStyle1:
+  systemImageName: arrow.uturn.left.circle.fill
+  <<: *alphabeticHoldSymbolStyle
+selectButtonForegroundStyle2:
+  systemImageName: arrow.uturn.right.circle.fill
+  <<: *alphabeticHoldSymbolStyle
+selectButtonForegroundStyle:
+  systemImageName: "square.grid.3x3.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+
+rightButton:
+  size:
+    width: 140.625/1125
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rightButtonForegroundStyle
+  preeditStateForegroundStyle: rightpreeditStateForegroundStyle
+  action: {shortcutCommand: "#右移"}
+  swipeUpAction: {shortcutCommand: "#行尾"}
+  swipeDownAction: {character: "]"}
+  preeditStateAction: {sendKeys: "Down"}
+  repeatAction: {shortcutCommand: "#右移"}
+  # holdSymbolsStyle: rightButtonHoldSymbolsStyle
+
+rightButtonForegroundStyle:
+  systemImageName: "arrowshape.turn.up.right.fill"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+rightButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rightButtonHoldSymbolsForegroundStyle2
+  - rightButtonHoldSymbolsForegroundStyle
+  actions:
+  - {character: "]"}
+  - {shortcutCommand: "#行尾"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+
+rightButtonHoldSymbolsForegroundStyle:
+  systemImageName: "arrowshape.right.fill"
+  <<: *alphabeticHoldSymbolStyle
+
+rightButtonHoldSymbolsForegroundStyle2:
+  systemImageName: "square.and.line.vertical.and.square.filled"
+  <<: *alphabeticHoldSymbolStyle
+
+rightpreeditStateForegroundStyle:
+  systemImageName: "square.and.line.vertical.and.square.filled"
+  <<: *alphabeticCustomButtonForegroundStyle
+
+qButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - qButtonForegroundStyle
+  - qButtonUpForegroundStyle
+  # - qButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - qButtonUppercasedStateForegroundStyle
+  # - qButtonUpForegroundStyle
+  # - qButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - qButtonUppercasedStateForegroundStyle
+  # - qButtonUpForegroundStyle
+  # - qButtonDownForegroundStyle
+  # hintStyle: qButtonHintStyle
+  action: {character: "q"}
+  # uppercasedStateAction: {character: "#"}
+  swipeUpAction: {character: "#"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "!"}  # 对应pinyin26_down
+  # holdSymbolsStyle: qButtonHoldSymbolsStyle
+
+qButtonForegroundStyle:
+  text: "Q"
+  <<: *alphabeticButtonForegroundStyle
+
+qButtonUppercasedStateForegroundStyle:
+  text: "Q"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+qButtonUpForegroundStyle:
+  text: "#"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+qButtonDownForegroundStyle:
+  text: "!"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+qButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: qButtonHintForegroundStyle
+  swipeUpForegroundStyle: qButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: qButtonSwipeDownHintForegroundStyle
+
+qButtonHintForegroundStyle:
+  text: "Q"
+  <<: *alphabeticHintStyle
+
+qButtonSwipeUpHintForegroundStyle:
+  text: "行首"
+  <<: *alphabeticHintStyle
+
+qButtonSwipeDownHintForegroundStyle:
+  text: "复制"
+  <<: *alphabeticHintStyle
+
+qButtonHoldSymbolsStyle:
+  insets: &id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - qButtonForegroundStyle1
+  actions:
+  - {character: "q"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+qButtonForegroundStyle1:
+  text: "q"
+  <<: *alphabeticHoldSymbolStyle
+
+wButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - wButtonForegroundStyle
+  - wButtonUpForegroundStyle
+  # - wButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - wButtonUppercasedStateForegroundStyle
+  # - wButtonUpForegroundStyle
+  # - wButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - wButtonUppercasedStateForegroundStyle
+  # - wButtonUpForegroundStyle
+  # - wButtonDownForegroundStyle
+  # hintStyle: wButtonHintStyle
+  action: {character: "w"}
+  # uppercasedStateAction: {character: "W"}
+  swipeUpAction: {character: "1"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "9"}  # 对应pinyin26_down
+  # holdSymbolsStyle: wButtonHoldSymbolsStyle
+
+wButtonForegroundStyle:
+  text: "WE"
+  <<: *alphabeticButtonForegroundStyle
+
+wButtonUppercasedStateForegroundStyle:
+  text: "W"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+wButtonUpForegroundStyle:
+  text: "1"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+wButtonDownForegroundStyle:
+  text: "9"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+wButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: wButtonHintForegroundStyle
+  swipeUpForegroundStyle: wButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: wButtonSwipeDownHintForegroundStyle
+
+wButtonHintForegroundStyle:
+  text: "W"
+  <<: *alphabeticHintStyle
+
+wButtonSwipeUpHintForegroundStyle:
+  text: ")"
+  <<: *alphabeticHintStyle
+
+wButtonSwipeDownHintForegroundStyle:
+  text: "9"
+  <<: *alphabeticHintStyle
+
+wButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - wButtonForegroundStyle1
+  - wButtonForegroundStyle2
+  - wButtonForegroundStyle3
+  actions:
+  - {character: "w"}
+  - {character: "e"}
+  - {symbol: "➒"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+wButtonForegroundStyle1:
+  text: "w"
+  <<: *alphabeticHoldSymbolStyle
+
+wButtonForegroundStyle2:
+  text: "e"
+  <<: *alphabeticHoldSymbolStyle
+
+wButtonForegroundStyle3:
+  text: "➒"
+  <<: *alphabeticHoldSymbolStyle
+
+eButton:
+  size:
+    width: 1/5
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - eButtonForegroundStyle
+  - eButtonUpForegroundStyle
+  # - eButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - eButtonUppercasedStateForegroundStyle
+  # - eButtonUpForegroundStyle
+  # - eButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - eButtonUppercasedStateForegroundStyle
+  # - eButtonUpForegroundStyle
+  # - eButtonDownForegroundStyle
+  # hintStyle: eButtonHintStyle
+  action: {character: e}
+  uppercasedStateAction: {character: E}
+  swipeUpAction:
+    character: '2'
+  # holdSymbolsStyle: eButtonHoldSymbolsStyle
+
+  swipeDownAction:
+    character: '#'
+eButtonForegroundStyle:
+  text: "ER"
+  <<: *alphabeticButtonForegroundStyle
+
+eButtonUppercasedStateForegroundStyle:
+  text: "E"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+eButtonUpForegroundStyle:
+  text: '2'
+  <<: *alphabeticSwipeUpBadgeStyle
+eButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: '#'
+eButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: eButtonHintForegroundStyle
+  swipeUpForegroundStyle: eButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: eButtonSwipeDownHintForegroundStyle
+eButtonHintForegroundStyle:
+  text: E
+  <<: *alphabeticHintStyle
+
+eButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '3'
+eButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '#'
+eButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - eButtonForegroundStyle1
+  - eButtonForegroundStyle2
+  - eButtonForegroundStyle3
+  actions:
+  - character: e
+  - character: E
+  - symbol: ➌
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+eButtonForegroundStyle1:
+  text: e
+  <<: *alphabeticHoldSymbolStyle
+eButtonForegroundStyle2:
+  text: E
+  <<: *alphabeticHoldSymbolStyle
+eButtonForegroundStyle3:
+  text: ➌
+  <<: *alphabeticHoldSymbolStyle
+
+rButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - rButtonForegroundStyle
+  - rButtonUpForegroundStyle
+  # - rButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - rButtonUppercasedStateForegroundStyle
+  # - rButtonUpForegroundStyle
+  # - rButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - rButtonUppercasedStateForegroundStyle
+  # - rButtonUpForegroundStyle
+  # - rButtonDownForegroundStyle
+  # hintStyle: rButtonHintStyle
+  # holdSymbolsStyle: rButtonHoldSymbolsStyle
+  action: {character: r}
+  # uppercasedStateAction: {character: R}
+  swipeUpAction:
+    character: '2'
+  # swipeDownAction:
+  #   character: $
+rButtonForegroundStyle:
+  text: "RT"
+  <<: *alphabeticButtonForegroundStyle
+
+rButtonUppercasedStateForegroundStyle:
+  text: "R"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+rButtonUpForegroundStyle:
+  text: '2'
+  <<: *alphabeticSwipeUpBadgeStyle
+rButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: $
+rButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: rButtonHintForegroundStyle
+  swipeUpForegroundStyle: rButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: rButtonSwipeDownHintForegroundStyle
+rButtonHintForegroundStyle:
+  text: R
+  <<: *alphabeticHintStyle
+
+rButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '4'
+rButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: $
+rButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - rButtonForegroundStyle1
+  - rButtonForegroundStyle2
+  - rButtonForegroundStyle3
+  actions:
+  - character: r
+  - character: R
+  - symbol: ➍
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+rButtonForegroundStyle1:
+  text: r
+  <<: *alphabeticHoldSymbolStyle
+rButtonForegroundStyle2:
+  text: R
+  <<: *alphabeticHoldSymbolStyle
+rButtonForegroundStyle3:
+  text: ➍
+  <<: *alphabeticHoldSymbolStyle
+
+tButton:
+  size:
+    width: 1/5
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - tButtonForegroundStyle
+  - tButtonUpForegroundStyle
+  # - tButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - tButtonUppercasedStateForegroundStyle
+  # - tButtonUpForegroundStyle
+  # - tButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - tButtonUppercasedStateForegroundStyle
+  # - tButtonUpForegroundStyle
+  # - tButtonDownForegroundStyle
+  # hintStyle: tButtonHintStyle
+  action: {character: "t"}
+  uppercasedStateAction: {character: "T"}
+  swipeUpAction: {character: "3"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "?"}  # 对应pinyin26_down
+  # holdSymbolsStyle: tButtonHoldSymbolsStyle
+
+tButtonForegroundStyle:
+  text: "TY"
+  <<: *alphabeticButtonForegroundStyle
+
+tButtonUppercasedStateForegroundStyle:
+  text: "T"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+tButtonUpForegroundStyle:
+  text: "3"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+tButtonDownForegroundStyle:
+  text: "?"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+tButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: tButtonHintForegroundStyle
+  swipeUpForegroundStyle: tButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: tButtonSwipeDownHintForegroundStyle
+
+tButtonHintForegroundStyle:
+  text: "T"
+  <<: *alphabeticHintStyle
+
+tButtonSwipeUpHintForegroundStyle:
+  text: "\""
+  <<: *alphabeticHintStyle
+
+tButtonSwipeDownHintForegroundStyle:
+  text: "?"
+  <<: *alphabeticHintStyle
+
+tButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - tButtonForegroundStyle1
+  actions:
+  - {character: "t"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+tButtonForegroundStyle1:
+  text: "t"
+  <<: *alphabeticHoldSymbolStyle
+
+yButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - yButtonForegroundStyle
+  - yButtonUpForegroundStyle
+  # - yButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - yButtonUppercasedStateForegroundStyle
+  # - yButtonUpForegroundStyle
+  # - yButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - yButtonUppercasedStateForegroundStyle
+  # - yButtonUpForegroundStyle
+  # - yButtonDownForegroundStyle
+  # hintStyle: yButtonHintStyle
+  action: {character: "y"}
+  # uppercasedStateAction: {character: "Y"}
+  swipeUpAction: {character: "3"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "8"}  # 对应pinyin26_down
+  # holdSymbolsStyle: yButtonHoldSymbolsStyle
+
+
+yButtonForegroundStyle:
+  text: "Y"
+  <<: *alphabeticButtonForegroundStyle
+
+yButtonUppercasedStateForegroundStyle:
+  text: "3"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+yButtonUpForegroundStyle:
+  text: "3"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+yButtonDownForegroundStyle:
+  text: "8"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+yButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: yButtonHintForegroundStyle
+  swipeUpForegroundStyle: yButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: yButtonSwipeDownHintForegroundStyle
+
+yButtonHintForegroundStyle:
+  text: "Y"
+  <<: *alphabeticHintStyle
+
+yButtonSwipeUpHintForegroundStyle:
+  text: "("
+  <<: *alphabeticHintStyle
+
+yButtonSwipeDownHintForegroundStyle:
+  text: "8"
+  <<: *alphabeticHintStyle
+
+yButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - yButtonForegroundStyle1
+  - yButtonForegroundStyle2
+  actions:
+  - {character: "y"}
+  - {symbol: "➑"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+yButtonForegroundStyle1:
+  text: "y"
+  <<: *alphabeticHoldSymbolStyle
+
+yButtonForegroundStyle2:
+  text: "➑"
+  <<: *alphabeticHoldSymbolStyle
+
+uButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - uButtonForegroundStyle
+  - uButtonUpForegroundStyle
+  # - uButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - uButtonUppercasedStateForegroundStyle
+  # - uButtonUpForegroundStyle
+  # - uButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - uButtonUppercasedStateForegroundStyle
+  # - uButtonUpForegroundStyle
+  # - uButtonDownForegroundStyle
+  # hintStyle: uButtonHintStyle
+  # holdSymbolsStyle: uButtonHoldSymbolsStyle
+  action: {character: u}
+  # uppercasedStateAction: {character: U}
+  swipeUpAction:
+    character: '/'
+  # swipeDownAction:
+  #   character: '&'
+uButtonForegroundStyle:
+  text: "U"
+  <<: *alphabeticButtonForegroundStyle
+
+uButtonUppercasedStateForegroundStyle:
+  text: "U"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+uButtonUpForegroundStyle:
+  text: '/'
+  <<: *alphabeticSwipeUpBadgeStyle
+uButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: '&'
+uButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: uButtonHintForegroundStyle
+  swipeUpForegroundStyle: uButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: uButtonSwipeDownHintForegroundStyle
+uButtonHintForegroundStyle:
+  text: U
+  <<: *alphabeticHintStyle
+
+uButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '7'
+uButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '&'
+uButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - uButtonForegroundStyle1
+  - uButtonForegroundStyle2
+  - uButtonForegroundStyle3
+  actions:
+  - character: u
+  - character: U
+  - symbol: ➐
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+uButtonForegroundStyle1:
+  text: u
+  <<: *alphabeticHoldSymbolStyle
+uButtonForegroundStyle2:
+  text: U
+  <<: *alphabeticHoldSymbolStyle
+uButtonForegroundStyle3:
+  text: ➐
+  <<: *alphabeticHoldSymbolStyle
+
+iButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - iButtonForegroundStyle
+  - iButtonUpForegroundStyle
+  # - iButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - iButtonUppercasedStateForegroundStyle
+  # - iButtonUpForegroundStyle
+  # - iButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - iButtonUppercasedStateForegroundStyle
+  # - iButtonUpForegroundStyle
+  # - iButtonDownForegroundStyle
+  # hintStyle: iButtonHintStyle
+  # holdSymbolsStyle: iButtonHoldSymbolsStyle
+  action: {character: i}
+  # uppercasedStateAction: {character: I}
+  swipeUpAction:
+    character: '-'
+  # swipeDownAction:
+  #   character: '*'
+iButtonForegroundStyle:
+  text: "IO"
+  <<: *alphabeticButtonForegroundStyle
+
+iButtonUppercasedStateForegroundStyle:
+  text: "I"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+iButtonUpForegroundStyle:
+  text: '-'
+  <<: *alphabeticSwipeUpBadgeStyle
+iButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: '*'
+iButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: iButtonHintForegroundStyle
+  swipeUpForegroundStyle: iButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: iButtonSwipeDownHintForegroundStyle
+iButtonHintForegroundStyle:
+  text: I
+  <<: *alphabeticHintStyle
+
+iButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '8'
+iButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '*'
+iButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - iButtonForegroundStyle1
+  - iButtonForegroundStyle2
+  - iButtonForegroundStyle3
+  actions:
+  - character: i
+  - character: I
+  - symbol: ➑
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+iButtonForegroundStyle1:
+  text: i
+  <<: *alphabeticHoldSymbolStyle
+iButtonForegroundStyle2:
+  text: I
+  <<: *alphabeticHoldSymbolStyle
+iButtonForegroundStyle3:
+  text: ➑
+  <<: *alphabeticHoldSymbolStyle
+
+oButton:
+  size:
+    width: 1/5
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - oButtonForegroundStyle
+  - oButtonUpForegroundStyle
+  # - oButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - oButtonUppercasedStateForegroundStyle
+  # - oButtonUpForegroundStyle
+  # - oButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - oButtonUppercasedStateForegroundStyle
+  # - oButtonUpForegroundStyle
+  # - oButtonDownForegroundStyle
+  # hintStyle: oButtonHintStyle
+  # holdSymbolsStyle: oButtonHoldSymbolsStyle
+  action: {character: o}
+  uppercasedStateAction: {character: O}
+  swipeUpAction:
+    character: '5'
+  swipeDownAction:
+    character: (
+oButtonForegroundStyle:
+  text: "OP"
+  <<: *alphabeticButtonForegroundStyle
+
+oButtonUppercasedStateForegroundStyle:
+  text: "O"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+oButtonUpForegroundStyle:
+  text: '5'
+  <<: *alphabeticSwipeUpBadgeStyle
+oButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: (
+oButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: oButtonHintForegroundStyle
+  swipeUpForegroundStyle: oButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: oButtonSwipeDownHintForegroundStyle
+oButtonHintForegroundStyle:
+  text: O
+  <<: *alphabeticHintStyle
+
+oButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '9'
+oButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: (
+oButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - oButtonForegroundStyle1
+  - oButtonForegroundStyle2
+  - oButtonForegroundStyle3
+  actions:
+  - character: o
+  - character: O
+  - symbol: ➒
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+oButtonForegroundStyle1:
+  text: o
+  <<: *alphabeticHoldSymbolStyle
+oButtonForegroundStyle2:
+  text: O
+  <<: *alphabeticHoldSymbolStyle
+oButtonForegroundStyle3:
+  text: ➒
+  <<: *alphabeticHoldSymbolStyle
+
+pButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - pButtonForegroundStyle
+  - pButtonUpForegroundStyle
+  # - pButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - pButtonUppercasedStateForegroundStyle
+  # - pButtonUpForegroundStyle
+  # - pButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - pButtonUppercasedStateForegroundStyle
+  # - pButtonUpForegroundStyle
+  # - pButtonDownForegroundStyle
+  # hintStyle: pButtonHintStyle
+  action: {character: p}
+  # uppercasedStateAction: {character: P}
+  swipeUpAction:
+    character: '_'
+  # holdSymbolsStyle: pButtonHoldSymbolsStyle
+
+  swipeDownAction:
+    character: )
+pButtonForegroundStyle:
+  text: "P"
+  <<: *alphabeticButtonForegroundStyle
+
+pButtonUppercasedStateForegroundStyle:
+  text: "_"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+pButtonUpForegroundStyle:
+  text: '_'
+  <<: *alphabeticSwipeUpBadgeStyle
+pButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: )
+pButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: pButtonHintForegroundStyle
+  swipeUpForegroundStyle: pButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: pButtonSwipeDownHintForegroundStyle
+pButtonHintForegroundStyle:
+  text: P
+  <<: *alphabeticHintStyle
+  fontSize: 1.75em
+  center:
+    x: 0.43
+    y: 0.5
+
+pButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '0'
+pButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: )
+pButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - pButtonForegroundStyle1
+  - pButtonForegroundStyle2
+  - pButtonForegroundStyle3
+  actions:
+  - character: p
+  - character: P
+  - symbol: 🄌
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+pButtonForegroundStyle1:
+  text: p
+  <<: *alphabeticHoldSymbolStyle
+pButtonForegroundStyle2:
+  text: P
+  <<: *alphabeticHoldSymbolStyle
+pButtonForegroundStyle3:
+  text: 🄌
+  <<: *alphabeticHoldSymbolStyle
+
+aButton:
+  size:
+    width: 3/14
+  bounds:
+    width: 2/3
+    alignment: right
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - aButtonForegroundStyle
+  - aButtonUpForegroundStyle
+  # - aButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - aButtonUppercasedStateForegroundStyle
+  # - aButtonUpForegroundStyle
+  # - aButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - aButtonUppercasedStateForegroundStyle
+  # - aButtonUpForegroundStyle
+  # - aButtonDownForegroundStyle
+  # hintStyle: aButtonHintStyle
+  action: {character: a}
+  uppercasedStateAction: {character: A}
+  swipeUpAction:
+    character: '!'
+  # swipeDownAction:
+  #   character: '`'
+  # holdSymbolsStyle: aButtonHoldSymbolsStyle
+
+aButtonForegroundStyle:
+  text: "A"
+  <<: *alphabeticButtonForegroundStyle
+
+aButtonUppercasedStateForegroundStyle:
+  text: "!"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+aButtonUpForegroundStyle:
+  text: '!'
+  <<: *alphabeticSwipeUpBadgeStyle
+aButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: '`'
+aButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: aButtonHintForegroundStyle
+  swipeUpForegroundStyle: aButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: aButtonSwipeDownHintForegroundStyle
+aButtonHintForegroundStyle:
+  text: A
+  <<: *alphabeticHintStyle
+
+aButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: 、
+aButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: '`'
+aButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - aButtonForegroundStyle1
+  - aButtonForegroundStyle2
+  actions:
+  - character: a
+  - character: A
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+aButtonForegroundStyle1:
+  text: a
+  <<: *alphabeticHoldSymbolStyle
+aButtonForegroundStyle2:
+  text: A
+  <<: *alphabeticHoldSymbolStyle
+
+
+
+
+sButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - sButtonForegroundStyle
+  - sButtonUpForegroundStyle
+  # - sButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - sButtonUppercasedStateForegroundStyle
+  # - sButtonUpForegroundStyle
+  # - sButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - sButtonUppercasedStateForegroundStyle
+  # - sButtonUpForegroundStyle
+  # - sButtonDownForegroundStyle
+  # hintStyle: sButtonHintStyle
+  action: {character: "s"}
+  # uppercasedStateAction: {character: "S"}
+  swipeUpAction: {character: "4"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "2"}  # 对应pinyin26_down
+  # holdSymbolsStyle: sButtonHoldSymbolsStyle
+
+sButtonForegroundStyle:
+  text: "SD"
+  <<: *alphabeticButtonForegroundStyle
+
+sButtonUppercasedStateForegroundStyle:
+  text: "4"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+sButtonUpForegroundStyle:
+  text: "4"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+sButtonDownForegroundStyle:
+  text: "2"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+sButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: sButtonHintForegroundStyle
+  swipeUpForegroundStyle: sButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: sButtonSwipeDownHintForegroundStyle
+
+sButtonHintForegroundStyle:
+  text: "S"
+  <<: *alphabeticHintStyle
+
+sButtonSwipeUpHintForegroundStyle:
+  text: "@"
+  <<: *alphabeticHintStyle
+
+sButtonSwipeDownHintForegroundStyle:
+  text: "2"
+  <<: *alphabeticHintStyle
+
+sButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - sButtonForegroundStyle1
+  - sButtonForegroundStyle2
+  actions:
+  - {character: "s"}
+  - {symbol: "➋"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+sButtonForegroundStyle1:
+  text: "s"
+  <<: *alphabeticHoldSymbolStyle
+
+sButtonForegroundStyle2:
+  text: "➋"
+  <<: *alphabeticHoldSymbolStyle
+
+dButton:
+  size:
+    width: 1/5
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - dButtonForegroundStyle
+  - dButtonUpForegroundStyle
+  # - dButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - dButtonUppercasedStateForegroundStyle
+  # - dButtonUpForegroundStyle
+  # - dButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - dButtonUppercasedStateForegroundStyle
+  # - dButtonUpForegroundStyle
+  # - dButtonDownForegroundStyle
+  # hintStyle: dButtonHintStyle
+  action: {character: "d"}
+  uppercasedStateAction: {character: "D"}
+  swipeUpAction: {character: "7"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "7"}  # 对应pinyin26_down
+  # holdSymbolsStyle: dButtonHoldSymbolsStyle
+
+dButtonForegroundStyle:
+  text: "DF"
+  <<: *alphabeticButtonForegroundStyle
+
+dButtonUppercasedStateForegroundStyle:
+  text: "D"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+dButtonUpForegroundStyle:
+  text: "7"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+dButtonDownForegroundStyle:
+  text: "7"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+dButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: dButtonHintForegroundStyle
+  swipeUpForegroundStyle: dButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: dButtonSwipeDownHintForegroundStyle
+
+dButtonHintForegroundStyle:
+  text: "D"
+  <<: *alphabeticHintStyle
+
+dButtonSwipeUpHintForegroundStyle:
+  text: "*"
+  <<: *alphabeticHintStyle
+
+dButtonSwipeDownHintForegroundStyle:
+  text: "7"
+  <<: *alphabeticHintStyle
+
+dButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - dButtonForegroundStyle1
+  - dButtonForegroundStyle2
+  - dButtonForegroundStyle3
+  actions:
+  - {character: "d"}
+  - {character: "u"}
+  - {symbol: "➐"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+dButtonForegroundStyle1:
+  text: "d"
+  <<: *alphabeticHoldSymbolStyle
+
+dButtonForegroundStyle2:
+  text: "u"
+  <<: *alphabeticHoldSymbolStyle
+
+dButtonForegroundStyle3:
+  text: "➐"
+  <<: *alphabeticHoldSymbolStyle
+
+fButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - fButtonForegroundStyle
+  - fButtonUpForegroundStyle
+  # - fButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - fButtonUppercasedStateForegroundStyle
+  # - fButtonUpForegroundStyle
+  # - fButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - fButtonUppercasedStateForegroundStyle
+  # - fButtonUpForegroundStyle
+  # - fButtonDownForegroundStyle
+  # hintStyle: fButtonHintStyle
+  action: {character: "f"}
+  # uppercasedStateAction: {character: "F"}
+  swipeUpAction: {character: "5"}  # 对应pinyin26_up
+  swipeDownAction: {character: "\\"}  # 对应pinyin26_down
+  holdSymbolsStyle: fButtonHoldSymbolsStyle
+
+fButtonForegroundStyle:
+  text: "FG"
+  <<: *alphabeticButtonForegroundStyle
+
+fButtonUppercasedStateForegroundStyle:
+  text: "5"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+fButtonUpForegroundStyle:
+  text: "5"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+fButtonDownForegroundStyle:
+  text: "\\"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+fButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: fButtonHintForegroundStyle
+  swipeUpForegroundStyle: fButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: fButtonSwipeDownHintForegroundStyle
+
+fButtonHintForegroundStyle:
+  text: "F"
+  <<: *alphabeticHintStyle
+
+fButtonSwipeUpHintForegroundStyle:
+  text: "/"
+  <<: *alphabeticHintStyle
+
+fButtonSwipeDownHintForegroundStyle:
+  text: "\\"
+  <<: *alphabeticHintStyle
+
+fButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - fButtonForegroundStyle1
+  actions:
+  - {character: "f"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+fButtonForegroundStyle1:
+  text: "f"
+  <<: *alphabeticHoldSymbolStyle
+
+
+gButton:
+  size:
+    width: 1/5
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - gButtonForegroundStyle
+  - gButtonUpForegroundStyle
+  # - gButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - gButtonUppercasedStateForegroundStyle
+  # - gButtonUpForegroundStyle
+  # - gButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - gButtonUppercasedStateForegroundStyle
+  # - gButtonUpForegroundStyle
+  # - gButtonDownForegroundStyle
+  # hintStyle: gButtonHintStyle
+  action: {character: "g"}
+  uppercasedStateAction: {character: "G"}
+  swipeUpAction: {character: "8"}  # 对应pinyin26_up
+  # swipeDownAction: {shortcutCommand: "#粘贴"}  # 对应pinyin26_down
+  # holdSymbolsStyle: gButtonHoldSymbolsStyle
+
+gButtonForegroundStyle:
+  text: "GH"
+  <<: *alphabeticButtonForegroundStyle
+
+gButtonUppercasedStateForegroundStyle:
+  text: "G"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+gButtonUpForegroundStyle:
+  text: "8"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+gButtonDownForegroundStyle:
+  text: "粘贴"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+gButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: gButtonHintForegroundStyle
+  swipeUpForegroundStyle: gButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: gButtonSwipeDownHintForegroundStyle
+
+gButtonHintForegroundStyle:
+  text: "G"
+  <<: *alphabeticHintStyle
+
+gButtonSwipeUpHintForegroundStyle:
+  text: "行尾"
+  <<: *alphabeticHintStyle
+
+gButtonSwipeDownHintForegroundStyle:
+  text: "粘贴"
+  <<: *alphabeticHintStyle
+
+gButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - gButtonForegroundStyle1
+  actions:
+  - {character: "g"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+gButtonForegroundStyle1:
+  text: "g"
+  <<: *alphabeticHoldSymbolStyle
+
+hButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - hButtonForegroundStyle
+  - hButtonUpForegroundStyle
+  # - hButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - hButtonUppercasedStateForegroundStyle
+  # - hButtonUpForegroundStyle
+  # - hButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - hButtonUppercasedStateForegroundStyle
+  # - hButtonUpForegroundStyle
+  # - hButtonDownForegroundStyle
+  # hintStyle: hButtonHintStyle
+  action: {character: "h"}
+  # uppercasedStateAction: {character: "H"}
+  swipeUpAction: {character: "6"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "1"}  # 对应pinyin26_down
+  # holdSymbolsStyle: hButtonHoldSymbolsStyle
+
+hButtonForegroundStyle:
+  text: "H"
+  <<: *alphabeticButtonForegroundStyle
+
+hButtonUppercasedStateForegroundStyle:
+  text: "H"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+hButtonUpForegroundStyle:
+  text: "6"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+hButtonDownForegroundStyle:
+  text: "1"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+hButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: hButtonHintForegroundStyle
+  swipeUpForegroundStyle: hButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: hButtonSwipeDownHintForegroundStyle
+
+hButtonHintForegroundStyle:
+  text: "H"
+  <<: *alphabeticHintStyle
+
+hButtonSwipeUpHintForegroundStyle:
+  text: "!"
+  <<: *alphabeticHintStyle
+
+hButtonSwipeDownHintForegroundStyle:
+  text: "1"
+  <<: *alphabeticHintStyle
+
+  
+hButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - hButtonForegroundStyle1
+  - hButtonForegroundStyle2
+  - hButtonForegroundStyle3
+  - hButtonForegroundStyle4
+  actions:
+  - {character: "h"}
+  - {character: "p"}
+  - {character: "a"}
+  - {symbol: "➊"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+hButtonForegroundStyle1:
+  text: "h"
+  <<: *alphabeticHoldSymbolStyle
+
+hButtonForegroundStyle2:
+  text: "p"
+  <<: *alphabeticHoldSymbolStyle
+
+hButtonForegroundStyle3:
+  text: "a"
+  <<: *alphabeticHoldSymbolStyle
+
+hButtonForegroundStyle4:
+  text: "➊"
+  <<: *alphabeticHoldSymbolStyle
+
+jButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - jButtonForegroundStyle
+  - jButtonUpForegroundStyle
+  # - jButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - jButtonUppercasedStateForegroundStyle
+  # - jButtonUpForegroundStyle
+  # - jButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - jButtonUppercasedStateForegroundStyle
+  # - jButtonUpForegroundStyle
+  # - jButtonDownForegroundStyle
+  # hintStyle: jButtonHintStyle
+  action: {character: "j"}
+  uppercasedStateAction: {character: "J"}
+  swipeUpAction: {character: "~"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "0"}  # 对应pinyin26_down
+  # holdSymbolsStyle: jButtonHoldSymbolsStyle
+
+jButtonForegroundStyle:
+  text: "JK"
+  <<: *alphabeticButtonForegroundStyle
+
+jButtonUppercasedStateForegroundStyle:
+  text: "J"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+jButtonUpForegroundStyle:
+  text: "~"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+jButtonDownForegroundStyle:
+  text: "0"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+jButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: jButtonHintForegroundStyle
+  swipeUpForegroundStyle: jButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: jButtonSwipeDownHintForegroundStyle
+
+jButtonHintForegroundStyle:
+  text: "J"
+  <<: *alphabeticHintStyle
+
+jButtonSwipeUpHintForegroundStyle:
+  text: "-"
+  <<: *alphabeticHintStyle
+
+jButtonSwipeDownHintForegroundStyle:
+  text: "0"
+  <<: *alphabeticHintStyle
+
+jButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - jButtonForegroundStyle1
+  - jButtonForegroundStyle2
+  - jButtonForegroundStyle3
+  - jButtonForegroundStyle4
+  actions:
+  - {character: "j"}
+  - {character: "k"}
+  - {character: "i"}
+  - {symbol: "🄌"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+jButtonForegroundStyle1:
+  text: "j"
+  <<: *alphabeticHoldSymbolStyle
+
+jButtonForegroundStyle2:
+  text: "k"
+  <<: *alphabeticHoldSymbolStyle
+
+jButtonForegroundStyle3:
+  text: "i"
+  <<: *alphabeticHoldSymbolStyle
+
+jButtonForegroundStyle4:
+  text: "🄌"
+  <<: *alphabeticHoldSymbolStyle
+
+kButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - kButtonForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - kButtonUppercasedStateForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - kButtonUppercasedStateForegroundStyle
+  - kButtonUpForegroundStyle
+  - kButtonDownForegroundStyle
+  hintStyle: kButtonHintStyle
+  action: {character: k}
+  uppercasedStateAction: {character: K}
+  swipeUpAction:
+    character: ':'
+  holdSymbolsStyle: kButtonHoldSymbolsStyle
+
+  swipeDownAction:
+    character: ;
+kButtonForegroundStyle:
+  text: "k"
+  <<: *alphabeticButtonForegroundStyle
+
+kButtonUppercasedStateForegroundStyle:
+  text: "K"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+kButtonUpForegroundStyle:
+  text: ':'
+  <<: *alphabeticSwipeUpBadgeStyle
+kButtonDownForegroundStyle:
+  <<: *alphabeticSwipeDownBadgeStyle
+  text: ;
+kButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: kButtonHintForegroundStyle
+  swipeUpForegroundStyle: kButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: kButtonSwipeDownHintForegroundStyle
+kButtonHintForegroundStyle:
+  text: K
+  <<: *alphabeticHintStyle
+
+kButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: ':'
+kButtonSwipeDownHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: ;
+kButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - kButtonForegroundStyle1
+  - kButtonForegroundStyle2
+  actions:
+  - character: k
+  - character: K
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+kButtonForegroundStyle1:
+  text: k
+  <<: *alphabeticHoldSymbolStyle
+kButtonForegroundStyle2:
+  text: K
+  <<: *alphabeticHoldSymbolStyle
+
+lButton:
+  size:
+    width: 1/7
+  bounds:
+    width: 2/3
+    alignment: left
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - lButtonForegroundStyle
+  - lButtonUpForegroundStyle
+  # - lButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - lButtonUppercasedStateForegroundStyle
+  # - lButtonUpForegroundStyle
+  # - lButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - lButtonUppercasedStateForegroundStyle
+  # - lButtonUpForegroundStyle
+  # - lButtonDownForegroundStyle
+  # hintStyle: lButtonHintStyle
+  action: {character: "l"}
+  uppercasedStateAction: {character: "L"}
+  swipeUpAction: {character: "?"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "6"}  # 对应pinyin26_down
+  # holdSymbolsStyle: lButtonHoldSymbolsStyle
+
+lButtonForegroundStyle:
+  text: "L"
+  <<: *alphabeticButtonForegroundStyle
+
+lButtonUppercasedStateForegroundStyle:
+  text: "0"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+lButtonUpForegroundStyle:
+  text: "?"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+lButtonDownForegroundStyle:
+  text: "6"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+lButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: lButtonHintForegroundStyle
+  swipeUpForegroundStyle: lButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: lButtonSwipeDownHintForegroundStyle
+
+lButtonHintForegroundStyle:
+  text: "L"
+  <<: *alphabeticHintStyle
+
+lButtonSwipeUpHintForegroundStyle:
+  text: "&"
+  <<: *alphabeticHintStyle
+
+lButtonSwipeDownHintForegroundStyle:
+  text: "6"
+  <<: *alphabeticHintStyle
+
+lButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - lButtonForegroundStyle1
+  - lButtonForegroundStyle2
+  - lButtonForegroundStyle3
+  actions:
+  - {character: "l"}
+  - {symbol: "➏"}
+  - {keyboardType: "lefthand"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 3
+
+lButtonForegroundStyle1:
+  text: "l"
+  <<: *alphabeticHoldSymbolStyle
+
+lButtonForegroundStyle2:
+  text: "➏"
+  <<: *alphabeticHoldSymbolStyle
+
+lButtonForegroundStyle3:
+  text: "左手"
+  <<: *alphabeticHoldSymbolStyle
+
+shiftButton:
+  size:
+    width: 1/7
+  bounds:
+    width: 151/168.75
+    alignment: left
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: shiftButtonForegroundStyle
+  uppercasedStateForegroundStyle: shiftButtonUppercasedForegroundStyle
+  capsLockedStateForegroundStyle: shiftButtonCapsLockedForegroundStyle
+  # preeditStateForegroundStyle: shiftpreeditStateForegroundStyle
+  # preeditStateAction: {character: \}
+  # preeditStateAction: {character: "/"}
+  action: { character: "'"}
+  # swipeDownAction: {sendKeys: "Break"}
+  # swipeUpAction: {character: "'"}
+  # swipeRightAction: tab
+
+
+shiftpreeditStateForegroundStyle-old:
+  text: "'词"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+  center:
+    y: 0.75
+
+shiftpreeditStateForegroundStyle:
+  systemImageName: "paragraphsign"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+
+
+shiftButtonForegroundStyle:
+  text: "'词"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.75
+
+shiftButtonUppercasedForegroundStyle:
+  systemImageName: "shift.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+
+shiftButtonCapsLockedForegroundStyle:
+  systemImageName: "capslock.fill"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+
+zButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - zButtonForegroundStyle
+  - zButtonUpForegroundStyle
+  # - zButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - zButtonUppercasedStateForegroundStyle
+  # - zButtonUpForegroundStyle
+  # - zButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - zButtonUppercasedStateForegroundStyle
+  # - zButtonUpForegroundStyle
+  # - zButtonDownForegroundStyle
+  # hintStyle: zButtonHintStyle
+  action: {character: "z"}
+  uppercasedStateAction: {character: "Z"}
+  swipeUpAction: {character: "@"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "3"}  # 对应pinyin26_down
+  # holdSymbolsStyle: zButtonHoldSymbolsStyle
+
+zButtonForegroundStyle:
+  text: "Z"
+  <<: *alphabeticButtonForegroundStyle
+
+zButtonUppercasedStateForegroundStyle:
+  text: "Z"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+zButtonUpForegroundStyle:
+  text: "@"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+zButtonDownForegroundStyle:
+  text: "3"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+zButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: zButtonHintForegroundStyle
+  swipeUpForegroundStyle: zButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: zButtonSwipeDownHintForegroundStyle
+
+zButtonHintForegroundStyle:
+  text: "Z"
+  <<: *alphabeticHintStyle
+
+zButtonSwipeUpHintForegroundStyle:
+  text: "#"
+  <<: *alphabeticHintStyle
+
+zButtonSwipeDownHintForegroundStyle:
+  text: "3"
+  <<: *alphabeticHintStyle
+
+zButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - zButtonForegroundStyle1
+  - zButtonForegroundStyle2
+  actions:
+  - {character: "z"}
+  - {symbol: "➌"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+zButtonForegroundStyle1:
+  text: "z"
+  <<: *alphabeticHoldSymbolStyle
+
+zButtonForegroundStyle2:
+  text: "➌"
+  <<: *alphabeticHoldSymbolStyle
+
+xButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - xButtonForegroundStyle
+  - xButtonUpForegroundStyle
+  # - xButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - xButtonUppercasedStateForegroundStyle
+  # - xButtonUpForegroundStyle
+  # - xButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - xButtonUppercasedStateForegroundStyle
+  # - xButtonUpForegroundStyle
+  # - xButtonDownForegroundStyle
+  # hintStyle: xButtonHintStyle
+  action: {character: "x"}
+  # uppercasedStateAction: {character: "X"}
+  swipeUpAction: {character: "7"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "5"}  # 对应pinyin26_down
+  # holdSymbolsStyle: xButtonHoldSymbolsStyle
+
+xButtonForegroundStyle:
+  text: "XC"
+  <<: *alphabeticButtonForegroundStyle
+
+xButtonUppercasedStateForegroundStyle:
+  text: "X"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+xButtonUpForegroundStyle:
+  text: "7"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+xButtonDownForegroundStyle:
+  text: "5"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+xButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: xButtonHintForegroundStyle
+  swipeUpForegroundStyle: xButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: xButtonSwipeDownHintForegroundStyle
+
+xButtonHintForegroundStyle:
+  text: "X"
+  <<: *alphabeticHintStyle
+
+xButtonSwipeUpHintForegroundStyle:
+  text: "%"
+  <<: *alphabeticHintStyle
+
+xButtonSwipeDownHintForegroundStyle:
+  text: "5"
+  <<: *alphabeticHintStyle
+
+xButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - xButtonForegroundStyle1
+  - xButtonForegroundStyle2
+  - xButtonForegroundStyle3
+  - xButtonForegroundStyle4
+  actions:
+  - {character: "o"}
+  - {character: "x"}
+  - {character: "v"}
+  - {symbol: "➎"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+xButtonForegroundStyle1:
+  text: "o"
+  <<: *alphabeticHoldSymbolStyle
+
+xButtonForegroundStyle2:
+  text: "x"
+  <<: *alphabeticHoldSymbolStyle
+
+xButtonForegroundStyle3:
+  text: "v"
+  <<: *alphabeticHoldSymbolStyle
+
+xButtonForegroundStyle4:
+  text: "➎"
+  <<: *alphabeticHoldSymbolStyle
+
+cButton:
+  size:
+    width: 148/840
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - cButtonForegroundStyle
+  # - cButtonUpForegroundStyle
+  # - cButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - cButtonUppercasedStateForegroundStyle
+  # - cButtonUpForegroundStyle
+  # - cButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - cButtonUppercasedStateForegroundStyle
+  # - cButtonUpForegroundStyle
+  # - cButtonDownForegroundStyle
+  # hintStyle: cButtonHintStyle
+  action: {character: "c"}
+  # uppercasedStateAction: {character: "C"}
+  # swipeUpAction: {shortcutCommand: "#selectText"}  # 对应pinyin26_up
+  # swipeDownAction: {shortcutCommand: "#撤销"}  # 对应pinyin26_down
+  # holdSymbolsStyle: cButtonHoldSymbolsStyle
+
+cButtonForegroundStyle:
+  text: "CV"
+  <<: *alphabeticButtonForegroundStyle
+
+cButtonUppercasedStateForegroundStyle:
+  text: "C"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+cButtonUpForegroundStyle:
+  text: "全选"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+cButtonDownForegroundStyle:
+  text: "撤销"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+cButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: cButtonHintForegroundStyle
+  swipeUpForegroundStyle: cButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: cButtonSwipeDownHintForegroundStyle
+
+cButtonHintForegroundStyle:
+  text: "C"
+  <<: *alphabeticHintStyle
+
+cButtonSwipeUpHintForegroundStyle:
+  text: "全选"
+  <<: *alphabeticHintStyle
+
+cButtonSwipeDownHintForegroundStyle:
+  text: "撤销"
+  <<: *alphabeticHintStyle
+
+cButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - cButtonForegroundStyle1
+  actions:
+  - {character: "c"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+cButtonForegroundStyle1:
+  text: "c"
+  <<: *alphabeticHoldSymbolStyle
+
+
+vButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - vButtonForegroundStyle
+  - vButtonUpForegroundStyle
+  # - vButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - vButtonUppercasedStateForegroundStyle
+  # - vButtonUpForegroundStyle
+  # - vButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - vButtonUppercasedStateForegroundStyle
+  # - vButtonUpForegroundStyle
+  # - vButtonDownForegroundStyle
+  # hintStyle: vButtonHintStyle
+  # holdSymbolsStyle: vButtonHoldSymbolsStyle
+  action: {character: v}
+  # uppercasedStateAction: {character: V}
+  swipeUpAction:
+    character: '8'
+  # swipeDownAction:
+  #   sendKeys: ors
+vButtonForegroundStyle:
+  text: "V"
+  <<: *alphabeticButtonForegroundStyle
+
+vButtonUppercasedStateForegroundStyle:
+  text: "V"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+vButtonUpForegroundStyle:
+  text: '8'
+  <<: *alphabeticSwipeUpBadgeStyle
+vButtonDownForegroundStyle:
+  <<: *sfsymbolSwipeDownBadgeStyle
+  systemImageName: calendar.badge.clock
+vButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: vButtonHintForegroundStyle
+  swipeUpForegroundStyle: vButtonSwipeUpHintForegroundStyle
+
+  swipeDownForegroundStyle: vButtonSwipeDownHintForegroundStyle
+vButtonHintForegroundStyle:
+  text: V
+  <<: *alphabeticHintStyle
+
+vButtonSwipeUpHintForegroundStyle:
+  <<: *alphabeticHintStyle
+  text: 《
+vButtonSwipeDownHintForegroundStyle:
+  <<: *sfsymbolHintStyle
+  systemImageName: calendar.badge.clock
+vButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - vButtonForegroundStyle1
+  - vButtonForegroundStyle2
+  actions:
+  - character: v
+  - character: V
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 1
+vButtonForegroundStyle1:
+  text: v
+  <<: *alphabeticHoldSymbolStyle
+vButtonForegroundStyle2:
+  text: V
+  <<: *alphabeticHoldSymbolStyle
+
+bButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - bButtonForegroundStyle
+  - bButtonUpForegroundStyle
+  # - bButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - bButtonUppercasedStateForegroundStyle
+  # - bButtonUpForegroundStyle
+  # - bButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - bButtonUppercasedStateForegroundStyle
+  # - bButtonUpForegroundStyle
+  # - bButtonDownForegroundStyle
+  # hintStyle: bButtonHintStyle
+  action: {character: "b"}
+  # uppercasedStateAction: {character: "B"}
+  swipeUpAction: {character: "9"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "4"}  # 对应pinyin26_down
+  # holdSymbolsStyle: bButtonHoldSymbolsStyle
+
+bButtonForegroundStyle:
+  text: "BN"
+  <<: *alphabeticButtonForegroundStyle
+
+bButtonUppercasedStateForegroundStyle:
+  text: "B"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+bButtonUpForegroundStyle:
+  text: "9"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+bButtonDownForegroundStyle:
+  text: "4"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+bButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: bButtonHintForegroundStyle
+  swipeUpForegroundStyle: bButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: bButtonSwipeDownHintForegroundStyle
+
+bButtonHintForegroundStyle:
+  text: "B"
+  <<: *alphabeticHintStyle
+
+bButtonSwipeUpHintForegroundStyle:
+  text: "$"
+  <<: *alphabeticHintStyle
+
+bButtonSwipeDownHintForegroundStyle:
+  text: "4"
+  <<: *alphabeticHintStyle
+
+bButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - bButtonForegroundStyle1
+  - bButtonForegroundStyle2
+  actions:
+  - {character: "b"}
+  - {symbol: "➍"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+bButtonForegroundStyle1:
+  text: "b"
+  <<: *alphabeticHoldSymbolStyle
+
+bButtonForegroundStyle2:
+  text: "➍"
+  <<: *alphabeticHoldSymbolStyle
+
+nButton:
+  size:
+    width: 1/6
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - nButtonForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  uppercasedStateForegroundStyle:
+  - nButtonUppercasedStateForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  capsLockedStateForegroundStyle:
+  - nButtonUppercasedStateForegroundStyle
+  - nButtonUpForegroundStyle
+  - nButtonDownForegroundStyle
+  hintStyle: nButtonHintStyle
+  action: {character: "n"}
+  uppercasedStateAction: {character: "N"}
+  swipeUpAction: {character: ":"}  # 对应pinyin26_up
+  swipeDownAction: {character: ";"}  # 对应pinyin26_down
+  holdSymbolsStyle: nButtonHoldSymbolsStyle
+
+nButtonForegroundStyle:
+  text: "NR"
+  <<: *alphabeticButtonForegroundStyle
+
+nButtonUppercasedStateForegroundStyle:
+  text: "N"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+nButtonUpForegroundStyle:
+  text: ":"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+nButtonDownForegroundStyle:
+  text: ";"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+nButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: nButtonHintForegroundStyle
+  swipeUpForegroundStyle: nButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: nButtonSwipeDownHintForegroundStyle
+
+nButtonHintForegroundStyle:
+  text: "N"
+  <<: *alphabeticHintStyle
+
+nButtonSwipeUpHintForegroundStyle:
+  text: ":"
+  <<: *alphabeticHintStyle
+
+nButtonSwipeDownHintForegroundStyle:
+  text: ";"
+  <<: *alphabeticHintStyle
+
+nButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - nButtonForegroundStyle1
+  - nButtonForegroundStyle2
+  - nButtonForegroundStyle3
+  actions:
+  - {character: "n"}
+  - {character: "r"}
+  - {keyboardType: "righthand"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 3
+
+nButtonForegroundStyle1:
+  text: "n"
+  <<: *alphabeticHoldSymbolStyle
+
+nButtonForegroundStyle2:
+  text: "r"
+  <<: *alphabeticHoldSymbolStyle
+
+nButtonForegroundStyle3:
+  text: "右手"
+  <<: *alphabeticHoldSymbolStyle
+
+mButton:
+  size:
+    width: 1/7
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - mButtonForegroundStyle
+  - mButtonUpForegroundStyle
+  # - mButtonDownForegroundStyle
+  # uppercasedStateForegroundStyle:
+  # - mButtonUppercasedStateForegroundStyle
+  # - mButtonUpForegroundStyle
+  # - mButtonDownForegroundStyle
+  # capsLockedStateForegroundStyle:
+  # - mButtonUppercasedStateForegroundStyle
+  # - mButtonUpForegroundStyle
+  # - mButtonDownForegroundStyle
+  # hintStyle: mButtonHintStyle
+  action: {character: "m"}
+  # uppercasedStateAction: {character: "M"}
+  swipeUpAction: {character: "0"}  # 对应pinyin26_up
+  # swipeDownAction: {character: "`"}  # 对应pinyin26_down
+  # holdSymbolsStyle: mButtonHoldSymbolsStyle
+
+mButtonForegroundStyle:
+  text: "M"
+  <<: *alphabeticButtonForegroundStyle
+
+mButtonUppercasedStateForegroundStyle:
+  text: "M"
+  <<: *alphabeticButtonUppercasedStateForegroundStyle
+
+mButtonUpForegroundStyle:
+  text: "0"
+  <<: *alphabeticSwipeUpBadgeStyle
+
+mButtonDownForegroundStyle:
+  text: "`"
+  <<: *alphabeticSwipeDownBadgeStyle
+
+mButtonHintStyle:
+  backgroundStyle: alphabeticHintBackgroundStyle
+  foregroundStyle: mButtonHintForegroundStyle
+  swipeUpForegroundStyle: mButtonSwipeUpHintForegroundStyle
+  swipeDownForegroundStyle: mButtonSwipeDownHintForegroundStyle
+
+mButtonHintForegroundStyle:
+  text: "M"
+  <<: *alphabeticHintStyle
+
+mButtonSwipeUpHintForegroundStyle:
+  text: "^"
+  <<: *alphabeticHintStyle
+
+mButtonSwipeDownHintForegroundStyle:
+  text: "`"
+  <<: *alphabeticHintStyle
+
+mButtonHoldSymbolsStyle:
+  insets: *id001
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - mButtonForegroundStyle1
+  actions:
+  - {character: "m"}
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+
+mButtonForegroundStyle1:
+  text: "m"
+  <<: *alphabeticHoldSymbolStyle
+
+backspaceButton:
+  size:
+    width: 1/7
+  bounds:
+    width: 151/168.75
+    alignment: right
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle:
+  - backspaceButtonForegroundStyle
+  action: backspace
+  repeatAction: backspace
+  swipeLeftAction: {shortcutCommand: "#重输"}
+  swipeUpAction: {shortcutCommand: "#deleteText"}
+
+backspaceButtonForegroundStyle:
+  systemImageName: "delete.left"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1.25em
+
+123Button:
+  size:
+    width: # width: 280/1125
+      percentage: 0.16
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle: 123ButtonForegroundStyle
+  action: {keyboardType: numeric}
+  swipeUpAction: {shortcutCommand: "#RimeSwitcher"}
+  swipeRightAction: {shortcutCommand: "#方案切换"}
+  holdSymbolsStyle: 123ButtonHoldSymbolsStyle
+
+123ButtonForegroundStyle:
+  text: "123"
+  <<: *systemButtonForegroundStyle
+123ButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - 123ButtonForegroundStyle1
+  - 123ButtonForegroundStyle2
+  - 123ButtonForegroundStyle3
+  - 123ButtonForegroundStyle4
+  actions:
+  - keyboardType: emoji
+  - keyboardType: symbolic
+  - shortcutCommand: '#RimeSwitcher'
+  - shortcutCommand: '#方案切换'
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+123ButtonForegroundStyle1:
+  systemImageName: face.dashed.fill
+  <<: *alphabeticHoldSymbolStyle
+123ButtonForegroundStyle2:
+  systemImageName: ellipsis.curlybraces
+  <<: *alphabeticHoldSymbolStyle
+123ButtonForegroundStyle3:
+  systemImageName: timeline.selection
+  <<: *alphabeticHoldSymbolStyle
+123ButtonForegroundStyle4:
+  systemImageName: filemenu.and.selection
+  <<: *alphabeticHoldSymbolStyle
+
+cnenButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: systemButtonBackgroundStyle
+  foregroundStyle:
+  - cnenButtonForegroundStyle
+  action: {keyboardType: alphabetic}
+  holdSymbolsStyle: cnenButtonHoldSymbolsStyle
+
+cnenButtonForegroundStyle:
+  assetImageName: chineseState
+  <<: *systemButtonForegroundStyle
+  center:
+    y: 0.5
+
+
+
+cnenButtonHoldSymbolsStyle:
+  backgroundStyle: alphabeticHoldSymbolsBackgroundStyle
+  foregroundStyle:
+  - cnenButtonForegroundStyle1
+  - cnenButtonForegroundStyle2
+  - cnenButtonForegroundStyle3
+  - cnenButtonForegroundStyle4
+  - cnenButtonForegroundStyle5
+  actions:
+  - sendKeys: Control+Shift+t
+  - sendKeys: Control+Shift+f
+  - sendKeys: Control+Shift+m
+  - sendKeys: Control+Shift+s
+  - sendKeys: Control+Shift+p
+  selectedStyle: alphabeticHoldSymbolsSelectedStyle
+  selectedIndex: 0
+cnenButtonForegroundStyle1:
+  text: |-
+    // JavaScript
+    function getText() {
+      if ($getRimeOptionState("s2s")) {
+          return "简";
+      } else if ($getRimeOptionState("s2t")) {
+          return "繁";
+      } else if ($getRimeOptionState("s2hk")) {
+          return "港";
+      } else if ($getRimeOptionState("s2tw")) {
+          return "台";
+      } else {
+          return "简";
+      }
+    }
+  <<: *alphabeticHoldSymbolStyle
+cnenButtonForegroundStyle2:
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("chinese_english") ? "翻" : "译";
+    }
+  <<: *alphabeticHoldSymbolStyle
+
+
+cnenButtonForegroundStyle3:
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("chaifen_switch") ? "拆" : "关";
+    }
+  <<: *alphabeticHoldSymbolStyle
+
+cnenButtonForegroundStyle4:
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("super_tips") ? "提" : "关";
+    }
+  <<: *alphabeticHoldSymbolStyle
+
+cnenButtonForegroundStyle5:
+  text: |-
+    // JavaScript
+    function getText() {
+      return $getRimeOptionState("prediction") ? "预" : "测";
+    }
+  <<: *alphabeticHoldSymbolStyle
+
+commaButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - commaButtonPinyinForegroundStyle
+  - commaButtonUpForegroundStyle
+  action: {character: ","}
+  swipeUpAction: {symbol: ","}
+  repeatAction: {character: ","}
+
+commaButtonUpForegroundStyle:
+  text: ","
+  <<: *alphabeticSwipeUpBadgeStyle
+
+
+commaButtonPinyinForegroundStyle:
+  text: "，"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+commaButtonEnForegroundStyle:
+  text: ","
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+spaceButton:
+  size:
+    width: # width: 565/1125
+      percentage: 0.36
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle: spaceButtonPinyinForegroundStyle
+  preeditStateForegroundStyle: spacepreeditStateForegroundStyle
+  action: space
+  swipeUpAction: {shortcutCommand: "#次选上屏"}
+  swipeDownAction: {shortcutCommand: "#三选上屏"}
+  swipeLeftAction: {sendKeys: Left}
+  swipeRightAction: {sendKeys: Right}
+
+
+spaceButtonPinyinForegroundStyle:
+  systemImageName: "space"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.6
+
+spacepreeditStateForegroundStyle:
+  text: |-
+    // JavaScript
+    function getText() {
+      const candidate = $getRimeCandidates();
+      
+      // 判断 candidate 是否存在
+      if (candidate && candidate.length > 0) {
+        const result = candidate.map(c => c.text).join(" ");
+        if (result.length > 11) {
+          return result.slice(0,8) + "...";
+        }
+        return result;
+      }
+      return "";
+    }
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+
+dotButton:
+  size:
+    width:
+      percentage: 0.1
+  backgroundStyle: alphabeticButtonBackgroundStyle
+  foregroundStyle:
+  - dotButtonPinyinForegroundStyle
+  - dotButtonUpForegroundStyle
+  action: {character: "."}
+  swipeUpAction: {symbol: "."}
+  repeatAction: {character: "."}
+
+dotButtonUpForegroundStyle:
+  text: .
+  <<: *alphabeticSwipeUpBadgeStyle
+
+
+dotButtonPinyinForegroundStyle:
+  text: "。"
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+dotButtonEnForegroundStyle:
+  text: "."
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+
+enterButton:
+  size:
+    width: # width: 280/1125
+      percentage: 0.22
+  backgroundStyle: |-
+    // JavaScript
+    function getText() {
+      let type = $getReturnKeyType();
+      if (type === 1 || type === 4 || type === 7) {
+        return "blueSystemButtonBackgroundStyle";
+      }
+      return "systemButtonBackgroundStyle";
+    }
+  foregroundStyle: |-
+    // JavaScript
+    function getText() {
+      let type = $getReturnKeyType();
+      if (type === 1 || type === 4 || type === 7) {
+        return "enterButtonWhiteForegroundStyle";
+      }
+      return "enterButtonBlackForegroundStyle";
+    }
+  action: enter
+  swipeUpAction: {shortcutCommand: "#换行"}
+
+
+enterButtonWhiteForegroundStyle:
+  text: |-
+    // JavaScript
+    function getText() {
+      const type = $getReturnKeyType();
+      switch (type) {
+        case 1:
+          return "前往";
+        case 3:
+          return "加入";
+        case 4:
+          return "前往";
+        case 6:
+          return "搜索"
+        case 7:
+          return "发送"
+        case 9:
+          return "完成";
+        default:
+          return "换行";
+      }
+    }
+  normalColor: ffffff
+  highlightColor: ffffff
+  fontSize: 1em
+  center:
+    y: 0.8
+
+enterButtonBlackForegroundStyle:
+  text: |-
+    // JavaScript
+    function getText() {
+      const type = $getReturnKeyType();
+      switch (type) {
+        case 1:
+          return "前往";
+        case 3:
+          return "加入";
+        case 4:
+          return "前往";
+        case 6:
+          return "搜索"
+        case 7:
+          return "发送"
+        case 9:
+          return "完成";
+        default:
+          return "换行";
+      }
+    }
+  <<: *systemButtonForegroundStyle
