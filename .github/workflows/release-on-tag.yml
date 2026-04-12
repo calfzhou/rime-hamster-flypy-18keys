@@ -19,6 +19,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          fetch-tags: true
+
+      - name: Ensure tags are available
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --force --tags
 
       - name: Build .hskin files
         run: make clean && make hskin
@@ -60,11 +67,16 @@ jobs:
         run: |
           set -euo pipefail
           current_tag="${GITHUB_REF_NAME}"
-          tag_notes="$(git tag -l --format='%(contents)' "$current_tag" | sed '/^[[:space:]]*$/d')"
+          tag_notes=""
+          if git rev-parse -q --verify "refs/tags/${current_tag}^{tag}" >/dev/null; then
+            tag_notes="$(git for-each-ref "refs/tags/${current_tag}" --format='%(contents)')"
+          fi
 
-          if [ -n "$tag_notes" ]; then
+          if printf '%s' "$tag_notes" | grep -q '[^[:space:]]'; then
+            echo "Using annotated tag message as release notes."
             body="$tag_notes"
           else
+            echo "Annotated tag message not found; using commit-range summary."
             previous_tag="$(git describe --tags --abbrev=0 "${current_tag}^" 2>/dev/null || true)"
             if [ -n "$previous_tag" ]; then
               range="${previous_tag}..${current_tag}"
