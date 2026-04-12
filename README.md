@@ -8,12 +8,22 @@ Flypy double-pinyin 18-key **schema** for Rime/Hamster:
 
 - `rime/`
   - `double_pinyin_flypy_18.schema.yaml`
+- `recipes/`
+  - `flypy18.recipe.yaml` (Plum recipe entry)
 - `design/`
   - design/plan docs for iterative refinement
 
 ## Rime setup
 
-1. Copy `rime/double_pinyin_flypy_18.schema.yaml` into your Rime user directory (or install by Plum from this repo).
+### Option A: install via Plum (recommended)
+
+```bash
+bash rime-install calfzhou/rime-hamster-flypy-18keys:recipes/flypy18
+```
+
+### Option B: manual copy
+
+1. Copy `rime/double_pinyin_flypy_18.schema.yaml` into your Rime user directory.
 2. In your own `default.custom.yaml`, add this schema to `schema_list`:
 
 ```yaml

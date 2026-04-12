@@ -1,0 +1,6 @@
+recipe:
+  Rx: recipes/flypy18
+  description: Flypy 18-key schema for Hamster
+
+install_files:
+  - rime/double_pinyin_flypy_18.schema.yaml
