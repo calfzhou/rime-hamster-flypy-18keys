@@ -45,6 +45,10 @@ patch:
 Use any compatible 18-key Hamster skin, then select schema `double_pinyin_flypy_18`.
 In this repo, `.keyboard` files are treated as generated cache and are not tracked.
 
+### Demo
+
+![Hamster 18-key skin demo](skin/hamster-18key-minimal/demo.png)
+
 ## 18-key design rule (current version)
 
 - Shared keys: `WE RT IO SD FG JK XC BN`
